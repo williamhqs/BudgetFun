@@ -70,6 +70,7 @@ final class AddTransactionViewModel {
             trasaction?.category = c
             trasaction?.amount = amount as NSDecimalNumber
             trasaction?.currenceType = currency.rawValue
+            trasaction?.createdAt = Date()
         } catch {
             
         }

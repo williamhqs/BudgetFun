@@ -8,6 +8,17 @@
 
 import UIKit
 
-class TransactionViewCell: UITableViewCell {
+final class TransactionViewCell: UITableViewCell {
     
+    @IBOutlet weak var categoryNameLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var createdAtLabel: UILabel!
+    @IBOutlet weak var categoryColorView: UIView!
+    
+    func configure(by transaction: Transaction) {
+        amountLabel.text = transaction.amount?.stringValue
+        categoryNameLabel.text = transaction.category?.name
+        categoryColorView.backgroundColor = transaction.category?.color as? UIColor
+        createdAtLabel.text = transaction.createdAt?.timestampString
+    }
 }

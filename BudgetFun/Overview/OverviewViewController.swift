@@ -8,9 +8,9 @@
 
 import UIKit
 
-class OverviewViewController: UIViewController {
+final class OverviewViewController: UIViewController {
 
-    let viewModel = OverviewviewModel()
+    let viewModel = OverviewViewModel()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,18 +21,19 @@ class OverviewViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        viewModel.loadTransactions()
         tableView.reloadData()
     }
     
     private func setupViews() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewTrsaction))
-        
+        tableView.tableFooterView = UIView()
     }
     
     @objc func addNewTrsaction() {
         let addTransactionViewController = AddTransactionViewController(nibName: AddTransactionViewController.identifier, bundle: nil)
         let navigationController = UINavigationController(rootViewController: addTransactionViewController)
-        
+        navigationController.modalPresentationStyle = .fullScreen
         present(navigationController, animated: true, completion: nil)
     }
     
@@ -45,7 +46,8 @@ extension OverviewViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TransactionViewCell.identifier) as! TransactionViewCell
-        cell.backgroundColor = UIColor.red
+        
+        cell.configure(by: viewModel.transactions[indexPath.row])
         return cell
     }
     

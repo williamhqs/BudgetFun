@@ -106,7 +106,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr6-4x-KNA">
-                                                    <rect key="frame" x="52" y="42.5" width="32" height="21"/>
+                                                    <rect key="frame" x="44" y="42.5" width="32" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -118,21 +118,38 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 day ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rr-G6-QDT">
-                                                    <rect key="frame" x="289" y="71.5" width="73" height="21"/>
+                                                    <rect key="frame" x="289" y="71.5" width="73" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4j-Xx-b55">
+                                                    <rect key="frame" x="16" y="43" width="20" height="20"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="Ox9-oW-iAr"/>
+                                                        <constraint firstAttribute="height" constant="20" id="dpp-Ue-oNA"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="H4j-Xx-b55" firstAttribute="leading" secondItem="jEB-Qi-0fE" secondAttribute="leading" constant="16" id="1Oj-pT-Egd"/>
                                                 <constraint firstItem="nph-xG-EB8" firstAttribute="centerY" secondItem="jEB-Qi-0fE" secondAttribute="centerY" id="4tl-b8-SiZ"/>
-                                                <constraint firstItem="xr6-4x-KNA" firstAttribute="leading" secondItem="jEB-Qi-0fE" secondAttribute="leadingMargin" constant="32" id="Q1K-eo-w5a"/>
+                                                <constraint firstItem="H4j-Xx-b55" firstAttribute="centerY" secondItem="jEB-Qi-0fE" secondAttribute="centerY" id="LKa-JJ-N6Y"/>
                                                 <constraint firstItem="xr6-4x-KNA" firstAttribute="centerY" secondItem="jEB-Qi-0fE" secondAttribute="centerY" id="Ywg-eX-Ass"/>
                                                 <constraint firstItem="1rr-G6-QDT" firstAttribute="trailing" secondItem="nph-xG-EB8" secondAttribute="trailing" id="aYx-Br-ZGP"/>
                                                 <constraint firstItem="1rr-G6-QDT" firstAttribute="top" secondItem="nph-xG-EB8" secondAttribute="bottom" constant="8" id="iOL-5c-SbY"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="nph-xG-EB8" secondAttribute="trailing" constant="32" id="oet-eW-P6S"/>
+                                                <constraint firstAttribute="bottom" secondItem="1rr-G6-QDT" secondAttribute="bottom" constant="8" id="xSt-y0-WkM"/>
+                                                <constraint firstItem="xr6-4x-KNA" firstAttribute="leading" secondItem="H4j-Xx-b55" secondAttribute="trailing" constant="8" id="xbP-hv-Crw"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountLabel" destination="nph-xG-EB8" id="hDG-um-LlE"/>
+                                            <outlet property="categoryColorView" destination="H4j-Xx-b55" id="OD3-j9-mf5"/>
+                                            <outlet property="categoryNameLabel" destination="xr6-4x-KNA" id="QuW-JA-E1q"/>
+                                            <outlet property="createdAtLabel" destination="1rr-G6-QDT" id="4dJ-1S-qVi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

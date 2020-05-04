@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddTransactionViewController: UIViewController {
+final class AddTransactionViewController: UIViewController {
 
     @IBOutlet weak var currencyAmountTextField: CurrencyField!
     @IBOutlet weak var currencySign: UILabel!
