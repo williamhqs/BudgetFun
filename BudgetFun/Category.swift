@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+enum CategoyType: Int {
+    case `default`, customize
+}
+

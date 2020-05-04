@@ -17,6 +17,8 @@
 		3D9ECD48245FC30700CA91BC /* BudgetFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD47245FC30700CA91BC /* BudgetFunTests.swift */; };
 		3D9ECD53245FC30700CA91BC /* BudgetFunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD52245FC30700CA91BC /* BudgetFunUITests.swift */; };
 		3D9ECD61245FC35F00CA91BC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD60245FC35F00CA91BC /* Category.swift */; };
+		3D9ECD6B245FD0AD00CA91BC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD6A245FD0AD00CA91BC /* CategoryViewController.swift */; };
+		3D9ECD6D245FD18700CA91BC /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD6C245FD18700CA91BC /* OverviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		3D9ECD52245FC30700CA91BC /* BudgetFunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetFunUITests.swift; sourceTree = "<group>"; };
 		3D9ECD54245FC30700CA91BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D9ECD60245FC35F00CA91BC /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		3D9ECD6A245FD0AD00CA91BC /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		3D9ECD6C245FD18700CA91BC /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				3D9ECD2D245FC30500CA91BC /* AppDelegate.swift */,
 				3D9ECD2F245FC30500CA91BC /* SceneDelegate.swift */,
 				3D9ECD31245FC30500CA91BC /* ViewController.swift */,
+				3D9ECD6A245FD0AD00CA91BC /* CategoryViewController.swift */,
+				3D9ECD6C245FD18700CA91BC /* OverviewViewController.swift */,
 				3D9ECD60245FC35F00CA91BC /* Category.swift */,
 				3D9ECD33245FC30500CA91BC /* Main.storyboard */,
 				3D9ECD39245FC30700CA91BC /* Assets.xcassets */,
@@ -267,8 +273,10 @@
 			files = (
 				3D9ECD32245FC30500CA91BC /* ViewController.swift in Sources */,
 				3D9ECD61245FC35F00CA91BC /* Category.swift in Sources */,
+				3D9ECD6D245FD18700CA91BC /* OverviewViewController.swift in Sources */,
 				3D9ECD2E245FC30500CA91BC /* AppDelegate.swift in Sources */,
 				3D9ECD38245FC30500CA91BC /* BudgetFun.xcdatamodeld in Sources */,
+				3D9ECD6B245FD0AD00CA91BC /* CategoryViewController.swift in Sources */,
 				3D9ECD30245FC30500CA91BC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
