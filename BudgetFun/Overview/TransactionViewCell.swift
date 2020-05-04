@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class TransactionViewCell: UITableViewCell {
+class TransactionViewCell: UITableViewCell {
     
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
@@ -21,4 +21,5 @@ final class TransactionViewCell: UITableViewCell {
         categoryColorView.backgroundColor = transaction.category?.color as? UIColor
         createdAtLabel.text = transaction.createdAt?.timestampString
     }
+    
 }

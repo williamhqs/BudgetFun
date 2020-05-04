@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class OverviewViewController: UIViewController {
+class OverviewViewController: UIViewController {
 
     let viewModel = OverviewViewModel()
     
@@ -21,13 +21,14 @@ final class OverviewViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.loadTransactions()
+        
         tableView.reloadData()
     }
     
     private func setupViews() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewTrsaction))
         tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = 50
     }
     
     @objc func addNewTrsaction() {
@@ -41,13 +42,14 @@ final class OverviewViewController: UIViewController {
 
 extension OverviewViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.transactions.count
+        let sectionInfo = viewModel.fetchedResultsController.sections?[section]
+        return sectionInfo?.numberOfObjects ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TransactionViewCell.identifier) as! TransactionViewCell
-        
-        cell.configure(by: viewModel.transactions[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: TransactionViewCell.identifier, for: indexPath) as! TransactionViewCell
+        let transaction = viewModel.fetchedResultsController.object(at: indexPath)
+        cell.configure(by: transaction)
         return cell
     }
     

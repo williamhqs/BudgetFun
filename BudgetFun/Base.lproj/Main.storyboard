@@ -112,13 +112,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nph-xG-EB8">
-                                                    <rect key="frame" x="331" y="42.5" width="31" height="21"/>
+                                                    <rect key="frame" x="331" y="32" width="31" height="42"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 day ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rr-G6-QDT">
-                                                    <rect key="frame" x="289" y="71.5" width="73" height="26.5"/>
+                                                    <rect key="frame" x="289" y="77.5" width="73" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -136,9 +136,9 @@
                                                 <constraint firstItem="H4j-Xx-b55" firstAttribute="leading" secondItem="jEB-Qi-0fE" secondAttribute="leading" constant="16" id="1Oj-pT-Egd"/>
                                                 <constraint firstItem="nph-xG-EB8" firstAttribute="centerY" secondItem="jEB-Qi-0fE" secondAttribute="centerY" id="4tl-b8-SiZ"/>
                                                 <constraint firstItem="H4j-Xx-b55" firstAttribute="centerY" secondItem="jEB-Qi-0fE" secondAttribute="centerY" id="LKa-JJ-N6Y"/>
+                                                <constraint firstItem="nph-xG-EB8" firstAttribute="top" secondItem="jEB-Qi-0fE" secondAttribute="top" constant="32" id="R4s-yt-0RT"/>
                                                 <constraint firstItem="xr6-4x-KNA" firstAttribute="centerY" secondItem="jEB-Qi-0fE" secondAttribute="centerY" id="Ywg-eX-Ass"/>
                                                 <constraint firstItem="1rr-G6-QDT" firstAttribute="trailing" secondItem="nph-xG-EB8" secondAttribute="trailing" id="aYx-Br-ZGP"/>
-                                                <constraint firstItem="1rr-G6-QDT" firstAttribute="top" secondItem="nph-xG-EB8" secondAttribute="bottom" constant="8" id="iOL-5c-SbY"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="nph-xG-EB8" secondAttribute="trailing" constant="32" id="oet-eW-P6S"/>
                                                 <constraint firstAttribute="bottom" secondItem="1rr-G6-QDT" secondAttribute="bottom" constant="8" id="xSt-y0-WkM"/>
                                                 <constraint firstItem="xr6-4x-KNA" firstAttribute="leading" secondItem="H4j-Xx-b55" secondAttribute="trailing" constant="8" id="xbP-hv-Crw"/>
@@ -153,8 +153,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="og9-Qu-vRG" id="Pfb-ZT-Kva"/>
-                                    <outlet property="delegate" destination="og9-Qu-vRG" id="klm-lJ-WeJ"/>
+                                    <outlet property="dataSource" destination="og9-Qu-vRG" id="fSL-yB-nNl"/>
+                                    <outlet property="delegate" destination="og9-Qu-vRG" id="73D-Ub-qkC"/>
                                 </connections>
                             </tableView>
                         </subviews>
