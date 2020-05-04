@@ -27,7 +27,7 @@
 		3D9ECD7D245FE08600CA91BC /* UIViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD7C245FE08600CA91BC /* UIViewCellTest.swift */; };
 		3DB87B21245FECD60079C611 /* Category+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B20245FECD60079C611 /* Category+Extension.swift */; };
 		3DB87B23245FED000079C611 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B22245FED000079C611 /* UIColor+Extension.swift */; };
-		3DB87B27245FF93F0079C611 /* OverViewviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B26245FF93F0079C611 /* OverViewviewModel.swift */; };
+		3DB87B27245FF93F0079C611 /* OverviewviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B26245FF93F0079C611 /* OverviewviewModel.swift */; };
 		3DB87B29245FF9600079C611 /* TransactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B28245FF9600079C611 /* TransactionViewCell.swift */; };
 		3DB87B2B245FF9EB0079C611 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B2A245FF9EB0079C611 /* UIView+Extension.swift */; };
 		3DB87B2E245FFD070079C611 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B2C245FFD070079C611 /* AddTransactionViewController.swift */; };
@@ -82,7 +82,7 @@
 		3D9ECD7C245FE08600CA91BC /* UIViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewCellTest.swift; sourceTree = "<group>"; };
 		3DB87B20245FECD60079C611 /* Category+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+Extension.swift"; sourceTree = "<group>"; };
 		3DB87B22245FED000079C611 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		3DB87B26245FF93F0079C611 /* OverViewviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewviewModel.swift; sourceTree = "<group>"; };
+		3DB87B26245FF93F0079C611 /* OverviewviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewviewModel.swift; sourceTree = "<group>"; };
 		3DB87B28245FF9600079C611 /* TransactionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewCell.swift; sourceTree = "<group>"; };
 		3DB87B2A245FF9EB0079C611 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		3DB87B2C245FFD070079C611 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				3D9ECD6C245FD18700CA91BC /* OverviewViewController.swift */,
-				3DB87B26245FF93F0079C611 /* OverViewviewModel.swift */,
+				3DB87B26245FF93F0079C611 /* OverviewviewModel.swift */,
 				3DB87B28245FF9600079C611 /* TransactionViewCell.swift */,
 			);
 			path = Overview;
@@ -396,7 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DC7B7D124603B4400D0F702 /* NetworkManager.swift in Sources */,
-				3DB87B27245FF93F0079C611 /* OverViewviewModel.swift in Sources */,
+				3DB87B27245FF93F0079C611 /* OverviewviewModel.swift in Sources */,
 				3DB87B2B245FF9EB0079C611 /* UIView+Extension.swift in Sources */,
 				3D20D0F624605E79000AD253 /* AddTransactionViewModel.swift in Sources */,
 				3D5C5155246044CF0064584E /* Exchange.swift in Sources */,

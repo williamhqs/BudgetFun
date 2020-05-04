@@ -17,7 +17,6 @@ class CurrencyField: UITextField {
         string.decimal / pow(10, Formatter.currency.maximumFractionDigits)
     }
     
-    
     var locale: Locale = .current {
         didSet {
             Formatter.currency.locale = locale
@@ -26,8 +25,6 @@ class CurrencyField: UITextField {
     }
     
     override func willMove(toSuperview newSuperview: UIView?) {
-        // you can make it a fixed locale currency if needed
-        // self.locale = Locale(identifier: "pt_BR") // or "en_US", "fr_FR", etc
         Formatter.currency.locale = locale
         addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         keyboardType = .numberPad

@@ -18,6 +18,9 @@ final class AddTransactionViewModel {
         return Currency.allCases.map { $0.rawValue }
     }
     
+    var selectedCategory: Category?
+    var inputAmount: Decimal?
+    
     var currency: Currency = .USD
     
     var currecyRate: Double?
@@ -44,6 +47,39 @@ final class AddTransactionViewModel {
         reqest { [weak self] (data, response, error) in
             guard let self = self else { return }
             self.currecyRate = data?.quote(targetCurrency: .NZD)
+        }
+    }
+    
+    func add() {
+        
+        guard let category = selectedCategory else {
+            #warning("Validate alert, category can't be nil")
+            return
+        }
+        
+        guard let amount = inputAmount else {
+            #warning("Validate alert, inputAmount can't be nil")
+            return
+        }
+
+        let coreDataManager = CoreDataManager()
+        let context = coreDataManager.newBackgroundContext()
+        let trasaction = coreDataManager.create(Transaction.self, in: context)
+        do {
+            let c = try context.existingObject(with: category.objectID) as? Category
+            trasaction?.category = c
+            trasaction?.amount = amount as NSDecimalNumber
+            trasaction?.currenceType = currency.rawValue
+        } catch {
+            
+        }
+        
+        context.perform {
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
     

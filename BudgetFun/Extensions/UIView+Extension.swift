@@ -14,3 +14,11 @@ extension UIView {
         return "\(self)"
     }
 }
+
+
+extension UIViewController {
+    
+    class var identifier: String {
+        return "\(self)"
+    }
+}

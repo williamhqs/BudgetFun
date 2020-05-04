@@ -14,5 +14,7 @@ final class CategoryViewModel {
     
     var categorySectionCount = CategoryType.allCases.count
     
+    var selectedCategory: Category?
+    
    
 }

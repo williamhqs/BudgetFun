@@ -12,6 +12,7 @@ import CoreData
 class CategoryViewController: UIViewController {
     
     let viewModel = CategoryViewModel()
+    var didSelectCategory: ((Category) -> Void)?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -44,22 +45,8 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
        
         setupViews()
-        
-//        insertNewObject()
-        let coreDataManager = CoreDataManager()
-        let context = coreDataManager.newBackgroundContext()
-        let category = coreDataManager.create(Category.self, in: context)
-        category?.name = "good"
-        category?.color = UIColor.cyan
-        context.perform {
-            do {
-                try context.save()
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-        
-        
+        insertNewObject()
+
     }
     
     func insertNewObject() {
@@ -68,7 +55,7 @@ class CategoryViewController: UIViewController {
              
         newCategory.name = "123"
         newCategory.color = UIColor.blue
-        newCategory.type = Int16(CategoryType.default.rawValue)
+        newCategory.type = CategoryType.default.rawValue
 
         // Save the context.
         do {
@@ -81,10 +68,7 @@ class CategoryViewController: UIViewController {
         }
     }
 
-}
 
-extension CategoryViewController: UICollectionViewDelegateFlowLayout {
-    
 }
 
 extension CategoryViewController: UICollectionViewDataSource {
@@ -105,9 +89,13 @@ extension CategoryViewController: UICollectionViewDataSource {
         cell.configure(by: category)
         return cell
     }
-        
 }
 
-extension CategoryViewController: NSFetchedResultsControllerDelegate {
-    
+extension CategoryViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let category = fetchedResultsController.object(at: indexPath)
+        didSelectCategory?(category)
+        self.navigationController?.popViewController(animated: true)
+    }
 }
+
