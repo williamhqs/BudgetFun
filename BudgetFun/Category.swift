@@ -8,7 +8,16 @@
 
 import Foundation
 
-enum CategoyType: Int {
+enum CategoryType: Int, CaseIterable {
     case `default`, customize
+    
+    var title: String {
+        switch self {
+        case .default:
+            return "default"
+        case .customize:
+            return "customize"
+        }
+    }
 }
 
