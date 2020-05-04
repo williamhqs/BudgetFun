@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class CategoryViewModel {
+final class CategoryViewModel {
     
     var categorySectionCount = CategoryType.allCases.count
     var managedObjectContext: NSManagedObjectContext?

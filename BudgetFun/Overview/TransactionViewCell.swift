@@ -1,5 +1,5 @@
 //
-//  UICollectionViewCell.swift
+//  TransactionViewCell.swift
 //  BudgetFun
 //
 //  Created by William Hu on 4/5/20.
@@ -8,9 +8,6 @@
 
 import UIKit
 
-extension UICollectionViewCell {
+class TransactionViewCell: UITableViewCell {
     
-    class var identifier: String {
-        return "\(self)"
-    }
 }

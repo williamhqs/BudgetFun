@@ -50,7 +50,6 @@ class CategoryViewController: UIViewController {
         }
         
         insertNewObject()
-//        setupViews()
     }
     
     func insertNewObject() {
@@ -58,7 +57,7 @@ class CategoryViewController: UIViewController {
         let newCategory = Category(context: context)
              
         newCategory.name = "123"
-        newCategory.color = UIColor.red
+        newCategory.color = UIColor.blue
         newCategory.type = Int16(CategoryType.default.rawValue)
 
         // Save the context.

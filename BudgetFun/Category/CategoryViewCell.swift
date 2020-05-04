@@ -13,9 +13,8 @@ final class CategoryViewCell: UICollectionViewCell {
     @IBOutlet weak var categoryColorView: UIView!
     @IBOutlet weak var categoryName: UILabel!
     
-    
     func configure(by category: Category) {
         categoryName.text = category.name
-        categoryColorView.backgroundColor = UIColor.red
+        categoryColorView.backgroundColor = category.color as? UIColor
     }
 }
