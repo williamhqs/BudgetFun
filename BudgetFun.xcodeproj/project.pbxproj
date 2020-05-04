@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D20D0F624605E79000AD253 /* AddTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20D0F524605E79000AD253 /* AddTransactionViewModel.swift */; };
+		3D20D0F924606698000AD253 /* CurrencyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20D0F824606698000AD253 /* CurrencyField.swift */; };
+		3D20D0FB246067C9000AD253 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20D0FA246067C9000AD253 /* String+Extension.swift */; };
+		3D5C5155246044CF0064584E /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C5154246044CF0064584E /* Exchange.swift */; };
 		3D9ECD2E245FC30500CA91BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD2D245FC30500CA91BC /* AppDelegate.swift */; };
 		3D9ECD30245FC30500CA91BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD2F245FC30500CA91BC /* SceneDelegate.swift */; };
-		3D9ECD32245FC30500CA91BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD31245FC30500CA91BC /* ViewController.swift */; };
 		3D9ECD35245FC30500CA91BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9ECD33245FC30500CA91BC /* Main.storyboard */; };
 		3D9ECD38245FC30500CA91BC /* BudgetFun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD36245FC30500CA91BC /* BudgetFun.xcdatamodeld */; };
 		3D9ECD3A245FC30700CA91BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D9ECD39245FC30700CA91BC /* Assets.xcassets */; };
@@ -30,6 +33,9 @@
 		3DB87B2E245FFD070079C611 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B2C245FFD070079C611 /* AddTransactionViewController.swift */; };
 		3DB87B2F245FFD070079C611 /* AddTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DB87B2D245FFD070079C611 /* AddTransactionViewController.xib */; };
 		3DB87B33245FFF910079C611 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B32245FFF910079C611 /* CoreDataManager.swift */; };
+		3DC7B7CC24602EC300D0F702 /* Currecy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7CB24602EC300D0F702 /* Currecy.swift */; };
+		3DC7B7CF24603A8300D0F702 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7CE24603A8300D0F702 /* HTTPMethod.swift */; };
+		3DC7B7D124603B4400D0F702 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7D024603B4400D0F702 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D20D0F524605E79000AD253 /* AddTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModel.swift; sourceTree = "<group>"; };
+		3D20D0F824606698000AD253 /* CurrencyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyField.swift; sourceTree = "<group>"; };
+		3D20D0FA246067C9000AD253 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		3D5C5154246044CF0064584E /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
 		3D9ECD2A245FC30500CA91BC /* BudgetFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9ECD2D245FC30500CA91BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D9ECD2F245FC30500CA91BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3D9ECD31245FC30500CA91BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3D9ECD34245FC30500CA91BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D9ECD37245FC30500CA91BC /* BudgetFun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudgetFun.xcdatamodel; sourceTree = "<group>"; };
 		3D9ECD39245FC30700CA91BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +88,9 @@
 		3DB87B2C245FFD070079C611 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		3DB87B2D245FFD070079C611 /* AddTransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTransactionViewController.xib; sourceTree = "<group>"; };
 		3DB87B32245FFF910079C611 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3DC7B7CB24602EC300D0F702 /* Currecy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currecy.swift; sourceTree = "<group>"; };
+		3DC7B7CE24603A8300D0F702 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		3DC7B7D024603B4400D0F702 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D20D0F72460667D000AD253 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D20D0F824606698000AD253 /* CurrencyField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3D9ECD21245FC30500CA91BC = {
 			isa = PBXGroup;
 			children = (
@@ -131,11 +151,13 @@
 			children = (
 				3D9ECD2D245FC30500CA91BC /* AppDelegate.swift */,
 				3D9ECD2F245FC30500CA91BC /* SceneDelegate.swift */,
-				3D9ECD31245FC30500CA91BC /* ViewController.swift */,
+				3D20D0F72460667D000AD253 /* View */,
+				3DC7B7CD246039C700D0F702 /* Networking */,
 				3DB87B30245FFD0F0079C611 /* AddTransaction */,
 				3DB87B25245FF8FD0079C611 /* Overview */,
 				3DB87B24245FF8ED0079C611 /* Category */,
 				3D9ECD60245FC35F00CA91BC /* CategoryType.swift */,
+				3D5C5154246044CF0064584E /* Exchange.swift */,
 				3DB87B1F245FECC40079C611 /* CoreData */,
 				3D9ECD76245FDF9800CA91BC /* Extensions */,
 				3D9ECD33245FC30500CA91BC /* Main.storyboard */,
@@ -171,6 +193,7 @@
 			children = (
 				3DB87B2A245FF9EB0079C611 /* UIView+Extension.swift */,
 				3DB87B22245FED000079C611 /* UIColor+Extension.swift */,
+				3D20D0FA246067C9000AD253 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,6 +221,7 @@
 				3D9ECD6E245FDB5700CA91BC /* CategoryViewModel.swift */,
 				3D9ECD72245FDED800CA91BC /* CategoryViewCell.swift */,
 				3D9ECD6A245FD0AD00CA91BC /* CategoryViewController.swift */,
+				3DC7B7CB24602EC300D0F702 /* Currecy.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -217,6 +241,7 @@
 			children = (
 				3DB87B2C245FFD070079C611 /* AddTransactionViewController.swift */,
 				3DB87B2D245FFD070079C611 /* AddTransactionViewController.xib */,
+				3D20D0F524605E79000AD253 /* AddTransactionViewModel.swift */,
 			);
 			path = AddTransaction;
 			sourceTree = "<group>";
@@ -227,6 +252,15 @@
 				3DB87B20245FECD60079C611 /* Category+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		3DC7B7CD246039C700D0F702 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3DC7B7CE24603A8300D0F702 /* HTTPMethod.swift */,
+				3DC7B7D024603B4400D0F702 /* NetworkManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,19 +395,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC7B7D124603B4400D0F702 /* NetworkManager.swift in Sources */,
 				3DB87B27245FF93F0079C611 /* OverViewviewModel.swift in Sources */,
 				3DB87B2B245FF9EB0079C611 /* UIView+Extension.swift in Sources */,
+				3D20D0F624605E79000AD253 /* AddTransactionViewModel.swift in Sources */,
+				3D5C5155246044CF0064584E /* Exchange.swift in Sources */,
 				3DB87B29245FF9600079C611 /* TransactionViewCell.swift in Sources */,
-				3D9ECD32245FC30500CA91BC /* ViewController.swift in Sources */,
 				3D9ECD61245FC35F00CA91BC /* CategoryType.swift in Sources */,
 				3DB87B23245FED000079C611 /* UIColor+Extension.swift in Sources */,
 				3D9ECD6D245FD18700CA91BC /* OverviewViewController.swift in Sources */,
 				3D9ECD2E245FC30500CA91BC /* AppDelegate.swift in Sources */,
+				3DC7B7CC24602EC300D0F702 /* Currecy.swift in Sources */,
 				3D9ECD6F245FDB5700CA91BC /* CategoryViewModel.swift in Sources */,
+				3D20D0FB246067C9000AD253 /* String+Extension.swift in Sources */,
 				3D9ECD38245FC30500CA91BC /* BudgetFun.xcdatamodeld in Sources */,
 				3D9ECD6B245FD0AD00CA91BC /* CategoryViewController.swift in Sources */,
 				3DB87B21245FECD60079C611 /* Category+Extension.swift in Sources */,
+				3D20D0F924606698000AD253 /* CurrencyField.swift in Sources */,
 				3DB87B2E245FFD070079C611 /* AddTransactionViewController.swift in Sources */,
+				3DC7B7CF24603A8300D0F702 /* HTTPMethod.swift in Sources */,
 				3D9ECD73245FDED800CA91BC /* CategoryViewCell.swift in Sources */,
 				3DB87B33245FFF910079C611 /* CoreDataManager.swift in Sources */,
 				3D9ECD30245FC30500CA91BC /* SceneDelegate.swift in Sources */,

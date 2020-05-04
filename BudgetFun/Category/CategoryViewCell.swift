@@ -13,6 +13,11 @@ final class CategoryViewCell: UICollectionViewCell {
     @IBOutlet weak var categoryColorView: UIView!
     @IBOutlet weak var categoryName: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        categoryColorView.layer.cornerRadius = 5.0
+    }
+    
     func configure(by category: Category) {
         categoryName.text = category.name
         categoryColorView.backgroundColor = category.color as? UIColor

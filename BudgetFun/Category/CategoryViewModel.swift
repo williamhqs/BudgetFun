@@ -6,19 +6,13 @@
 //  Copyright © 2020 William Hu. All rights reserved.
 //
 
-import Foundation
 import CoreData
+
+typealias RequestCompletion = (Exchange?, URLResponse?, Error?) -> ()
 
 final class CategoryViewModel {
     
     var categorySectionCount = CategoryType.allCases.count
-    var managedObjectContext: NSManagedObjectContext?
     
-    init(managedObjectContext: NSManagedObjectContext) {
-        self.managedObjectContext = managedObjectContext
-    }
-    
-    func a () {
-    
-    }
+   
 }

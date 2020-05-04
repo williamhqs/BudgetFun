@@ -11,14 +11,14 @@ import CoreData
 
 class CategoryViewController: UIViewController {
     
-    var viewModel: CategoryViewModel?
+    let viewModel = CategoryViewModel()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     var fetchedResultsController: NSFetchedResultsController<Category> {
         let fetchedRequest: NSFetchRequest<Category> = Category.fetchRequest()
         fetchedRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
-        let controller = NSFetchedResultsController(fetchRequest: fetchedRequest, managedObjectContext: viewModel!.managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
+        let controller = NSFetchedResultsController(fetchRequest: fetchedRequest, managedObjectContext: CoreDataManager().persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
         do {
             try controller.performFetch()
         } catch {
@@ -45,11 +45,21 @@ class CategoryViewController: UIViewController {
        
         setupViews()
         
-        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext  {
-            viewModel = CategoryViewModel(managedObjectContext: context)
+//        insertNewObject()
+        let coreDataManager = CoreDataManager()
+        let context = coreDataManager.newBackgroundContext()
+        let category = coreDataManager.create(Category.self, in: context)
+        category?.name = "good"
+        category?.color = UIColor.cyan
+        context.perform {
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
         }
         
-        insertNewObject()
+        
     }
     
     func insertNewObject() {
@@ -91,7 +101,6 @@ extension CategoryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryViewCell.identifier, for: indexPath) as! CategoryViewCell
-        cell.backgroundColor = UIColor.green
         let category = fetchedResultsController.object(at: indexPath)
         cell.configure(by: category)
         return cell

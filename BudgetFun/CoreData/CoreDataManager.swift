@@ -9,28 +9,136 @@
 import CoreData
 
 class CoreDataManager {
+    
+    func newBackgroundContext() -> NSManagedObjectContext {
+        let newContext = persistentContainer.newBackgroundContext()
+        newContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        return newContext
+    }
+    
     lazy var persistentContainer: NSPersistentContainer = {
+        
+        let container = NSPersistentContainer(name: "BudgetFun")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+       
+        container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        container.viewContext.automaticallyMergesChangesFromParent = true
+        return container
+    }()
+    
+    // MARK: - Core Data Saving support
+    
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
+    
+    
+//    func create<T>(_ type: T.Type, on context: NSManagedObjectContext, generatingBlock: ((inout T) -> ())) -> T where T : NSManagedObject {
+//
+//    }
+}
 
-           let container = NSPersistentContainer(name: "BudgetFun")
-           container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-               if let error = error as NSError? {
-                   fatalError("Unresolved error \(error), \(error.userInfo)")
-               }
-           })
-           return container
-       }()
+// MARK: - Query
+extension CoreDataManager {
+    
+    /// This is for reading from main thread
+    /// - Parameters:
+    ///   - type: <#type description#>
+    ///   - predicate: <#predicate description#>
+    ///   - sorting: <#sorting description#>
+    ///   - context: <#context description#>
+    /// - Returns: <#description#>
+    func get<T: NSManagedObject>(type: T.Type, with predicate: NSPredicate? = nil, sorting: [NSSortDescriptor]? = nil, in context: NSManagedObjectContext? = nil) -> [T] {
+        let entityName = T.entityName
+        let fetchRequest = NSFetchRequest<T>(entityName: entityName)
+        let context = context ?? persistentContainer.viewContext
+        
+        fetchRequest.predicate = predicate
+        fetchRequest.sortDescriptors = sorting
+        
+        var objects = [T]()
+        context.performAndWait {
+            do {
+                let result = try context.fetch(fetchRequest)
+                objects = result
+            } catch {
+                print("Cannot fetch  \(entityName). Error: \(error)")
+            }
+        }
+        
+        return objects
+    }
+    
+    func newWithoutSaving<T: NSManagedObject>(_ type: T.Type, in context: NSManagedObjectContext) -> T? {
+        var entity: NSEntityDescription?
+        context.performAndWait {
+            entity = NSEntityDescription.entity(forEntityName: T.entityName, in: context)
+        }
+        
+        let result = NSManagedObject(entity: entity!, insertInto: context) as? T
+        
+        assert(result != nil, "Failed to create managed object for type \(type)")
+        
+        return result
+    }
+    
+    /// Update from background queue
+    /// - Parameters:
+    ///   - type: <#type description#>
+    ///   - editCallback: <#editCallback description#>
+    ///   - completion: <#completion description#>
+    func insert<T: NSManagedObject>(_ type: T.Type, assignCallback: @escaping (T?) -> Void, completion: ((T?) -> Void)? = nil)  {
+        let backgroundContext = newBackgroundContext()
+        backgroundContext.perform {
+            let entity =  NSEntityDescription.entity(forEntityName: T.entityName, in: backgroundContext)
+            let object = NSManagedObject(entity: entity!, insertInto: backgroundContext) as? T
+            do {
+                if backgroundContext.hasChanges {
+                    do {
+                        try backgroundContext.save()
+                        backgroundContext.reset()
+                    } catch {
+                        print("error \(error)")
+                    }
+                }
+                
+            } catch {
+                print("Error on saving created object: \(error)")
+            }
+        }
+        
+    }
+    
+    func create<T: NSManagedObject>(_ type: T.Type, in context: NSManagedObjectContext) -> T? {
+        var entity: NSEntityDescription?
+        context.performAndWait {
+            entity = NSEntityDescription.entity(forEntityName: T.entityName, in: context)
+        }
+        
+        let result = NSManagedObject(entity: entity!, insertInto: context) as? T
+        
+        assert(result != nil, "Failed to create managed object for type \(type)")
+        
+        return result
+    }
+    
+}
 
-       // MARK: - Core Data Saving support
 
-       func saveContext () {
-           let context = persistentContainer.viewContext
-           if context.hasChanges {
-               do {
-                   try context.save()
-               } catch {
-                   let nserror = error as NSError
-                   fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-               }
-           }
-       }
+extension NSManagedObject {
+    static var entityName: String {
+        return String(describing: self)
+    }
 }
