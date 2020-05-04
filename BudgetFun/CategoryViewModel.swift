@@ -7,10 +7,16 @@
 //
 
 import Foundation
+import CoreData
 
 class CategoryViewModel {
     
     var categorySectionCount = CategoryType.allCases.count
+    var managedObjectContext: NSManagedObjectContext?
+    
+    init(managedObjectContext: NSManagedObjectContext) {
+        self.managedObjectContext = managedObjectContext
+    }
     
     func a () {
     

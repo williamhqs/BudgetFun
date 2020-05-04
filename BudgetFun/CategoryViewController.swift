@@ -7,37 +7,99 @@
 //
 
 import UIKit
+import CoreData
 
 class CategoryViewController: UIViewController {
     
-    let viewModel = CategoryViewModel()
+    var viewModel: CategoryViewModel?
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var fetchedResultsController: NSFetchedResultsController<Category> {
+        let fetchedRequest: NSFetchRequest<Category> = Category.fetchRequest()
+        fetchedRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
+        let controller = NSFetchedResultsController(fetchRequest: fetchedRequest, managedObjectContext: viewModel!.managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
+        do {
+            try controller.performFetch()
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+        return controller
+    }
+    
+    private func setupViews() {
+        let flow = UICollectionViewFlowLayout()
+        let itemSpacing: CGFloat = 3
+        let itemsInOneLine: CGFloat = 3
+        flow.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        let width = UIScreen.main.bounds.size.width - itemSpacing * CGFloat(itemsInOneLine - 1)
+        flow.itemSize = CGSize(width: floor(width/itemsInOneLine), height: width/itemsInOneLine)
+        flow.minimumInteritemSpacing = 1
+        flow.minimumLineSpacing = 1
+        collectionView.collectionViewLayout = flow
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+       
+        setupViews()
         
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext  {
+            viewModel = CategoryViewModel(managedObjectContext: context)
+        }
+        
+        insertNewObject()
+//        setupViews()
+    }
+    
+    func insertNewObject() {
+        let context = self.fetchedResultsController.managedObjectContext
+        let newCategory = Category(context: context)
+             
+        newCategory.name = "123"
+        newCategory.color = UIColor.red
+        newCategory.type = Int16(CategoryType.default.rawValue)
+
+        // Save the context.
+        do {
+            try context.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
     }
 
 }
 
-extension CategoryViewController: UICollectionViewDelegate {
+extension CategoryViewController: UICollectionViewDelegateFlowLayout {
     
 }
 
 extension CategoryViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return viewModel.categorySectionCount
+        return fetchedResultsController.sections?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        let sectionInfo = fetchedResultsController.sections![section]
+        return sectionInfo.numberOfObjects
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryViewCell.identifier, for: indexPath) as! CategoryViewCell
+        cell.backgroundColor = UIColor.green
+        let category = fetchedResultsController.object(at: indexPath)
+        cell.configure(by: category)
         return cell
     }
         
+}
+
+extension CategoryViewController: NSFetchedResultsControllerDelegate {
+    
 }

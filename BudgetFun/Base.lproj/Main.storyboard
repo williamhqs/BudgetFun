@@ -31,9 +31,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8lO-UQ-NXN">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8lO-UQ-NXN">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1sa-FG-KS2">
                                     <size key="itemSize" width="190" height="176"/>
@@ -72,6 +71,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="190" height="176"/>
+                                        <connections>
+                                            <outlet property="categoryColorView" destination="SpQ-pH-C7i" id="993-8b-pTD"/>
+                                            <outlet property="categoryName" destination="JoF-9A-iO0" id="6hr-cN-PGt"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -81,9 +84,18 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8lO-UQ-NXN" firstAttribute="top" secondItem="GiU-Pg-RH4" secondAttribute="top" id="0Q3-M4-Myx"/>
+                            <constraint firstItem="8lO-UQ-NXN" firstAttribute="trailing" secondItem="GiU-Pg-RH4" secondAttribute="trailing" id="Dgr-Kz-R9R"/>
+                            <constraint firstItem="8lO-UQ-NXN" firstAttribute="leading" secondItem="GiU-Pg-RH4" secondAttribute="leading" id="GU7-TB-bpm"/>
+                            <constraint firstItem="8lO-UQ-NXN" firstAttribute="bottom" secondItem="GiU-Pg-RH4" secondAttribute="bottom" id="KL0-AO-5pI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GiU-Pg-RH4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Category" id="pb9-OA-Hik"/>
+                    <connections>
+                        <outlet property="collectionView" destination="8lO-UQ-NXN" id="Z7u-sX-aG6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bda-5F-7cO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
