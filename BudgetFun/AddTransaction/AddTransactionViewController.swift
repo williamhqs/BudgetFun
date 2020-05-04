@@ -23,18 +23,20 @@ final class AddTransactionViewController: UIViewController {
         
         setupViews()
         
-        currencyAmountTextField.addTarget(self, action: #selector(currencyFieldChanged), for: .editingChanged)
-        currencyAmountTextField.locale = Locale(identifier: viewModel.currency.locale)
-        
     }
     
     private func setupViews() {
+        
+        currencyAmountTextField.addTarget(self, action: #selector(currencyFieldChanged), for: .editingChanged)
+        currencyAmountTextField.locale = Locale(identifier: viewModel.currency.locale)
+        
         guard currencySegmentControl.numberOfSegments == viewModel.currencySegmentTitles.count else { return }
         for index in 0..<currencySegmentControl.numberOfSegments {
             currencySegmentControl.setTitle(viewModel.currencySegmentTitles[index], forSegmentAt: index)
         }
         currencySign.text = viewModel.currency.sign
         categoryColor.layer.cornerRadius = 5.0
+        
     }
 
 }

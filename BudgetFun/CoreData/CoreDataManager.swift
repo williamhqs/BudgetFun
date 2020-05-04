@@ -54,12 +54,7 @@ class CoreDataManager {
 extension CoreDataManager {
     
     /// This is for reading from main thread
-    /// - Parameters:
-    ///   - type: <#type description#>
-    ///   - predicate: <#predicate description#>
-    ///   - sorting: <#sorting description#>
-    ///   - context: <#context description#>
-    /// - Returns: <#description#>
+    
     func get<T: NSManagedObject>(type: T.Type, with predicate: NSPredicate? = nil, sorting: [NSSortDescriptor]? = nil, in context: NSManagedObjectContext? = nil) -> [T] {
         let entityName = T.entityName
         let fetchRequest = NSFetchRequest<T>(entityName: entityName)
@@ -95,10 +90,7 @@ extension CoreDataManager {
     }
     
     /// Update from background queue
-    /// - Parameters:
-    ///   - type: <#type description#>
-    ///   - editCallback: <#editCallback description#>
-    ///   - completion: <#completion description#>
+    
     func insert<T: NSManagedObject>(_ type: T.Type, assignCallback: @escaping (T?) -> Void, completion: ((T?) -> Void)? = nil)  {
         let backgroundContext = newBackgroundContext()
         backgroundContext.perform {

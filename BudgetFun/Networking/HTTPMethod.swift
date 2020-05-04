@@ -8,10 +8,12 @@
 
 import Foundation
 
+typealias Parameter = [String: Any]
+
 enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
-    case PATCH = "PATCH"
     case delete = "DELETE"
 }
+

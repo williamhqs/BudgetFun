@@ -25,7 +25,7 @@
 		3D9ECD6F245FDB5700CA91BC /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD6E245FDB5700CA91BC /* CategoryViewModel.swift */; };
 		3D9ECD73245FDED800CA91BC /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD72245FDED800CA91BC /* CategoryViewCell.swift */; };
 		3D9ECD7D245FE08600CA91BC /* UIViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD7C245FE08600CA91BC /* UIViewCellTest.swift */; };
-		3DB87B21245FECD60079C611 /* Category+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B20245FECD60079C611 /* Category+Extension.swift */; };
+		3DB87B21245FECD60079C611 /* Transaction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B20245FECD60079C611 /* Transaction+Extension.swift */; };
 		3DB87B23245FED000079C611 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B22245FED000079C611 /* UIColor+Extension.swift */; };
 		3DB87B27245FF93F0079C611 /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B26245FF93F0079C611 /* OverviewViewModel.swift */; };
 		3DB87B29245FF9600079C611 /* TransactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B28245FF9600079C611 /* TransactionViewCell.swift */; };
@@ -34,6 +34,8 @@
 		3DB87B2F245FFD070079C611 /* AddTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DB87B2D245FFD070079C611 /* AddTransactionViewController.xib */; };
 		3DB87B33245FFF910079C611 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B32245FFF910079C611 /* CoreDataManager.swift */; };
 		3DC0B2A7246086E300A06708 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2A6246086E300A06708 /* Date+Extension.swift */; };
+		3DC0B2A92460944C00A06708 /* ExchangeRateEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2A82460944C00A06708 /* ExchangeRateEndPoint.swift */; };
+		3DC0B2AB2460947D00A06708 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2AA2460947D00A06708 /* Router.swift */; };
 		3DC7B7CC24602EC300D0F702 /* Currecy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7CB24602EC300D0F702 /* Currecy.swift */; };
 		3DC7B7CF24603A8300D0F702 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7CE24603A8300D0F702 /* HTTPMethod.swift */; };
 		3DC7B7D124603B4400D0F702 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7D024603B4400D0F702 /* NetworkManager.swift */; };
@@ -81,7 +83,7 @@
 		3D9ECD6E245FDB5700CA91BC /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		3D9ECD72245FDED800CA91BC /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		3D9ECD7C245FE08600CA91BC /* UIViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewCellTest.swift; sourceTree = "<group>"; };
-		3DB87B20245FECD60079C611 /* Category+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+Extension.swift"; sourceTree = "<group>"; };
+		3DB87B20245FECD60079C611 /* Transaction+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+Extension.swift"; sourceTree = "<group>"; };
 		3DB87B22245FED000079C611 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3DB87B26245FF93F0079C611 /* OverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
 		3DB87B28245FF9600079C611 /* TransactionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewCell.swift; sourceTree = "<group>"; };
@@ -90,6 +92,8 @@
 		3DB87B2D245FFD070079C611 /* AddTransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTransactionViewController.xib; sourceTree = "<group>"; };
 		3DB87B32245FFF910079C611 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		3DC0B2A6246086E300A06708 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		3DC0B2A82460944C00A06708 /* ExchangeRateEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateEndPoint.swift; sourceTree = "<group>"; };
+		3DC0B2AA2460947D00A06708 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		3DC7B7CB24602EC300D0F702 /* Currecy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currecy.swift; sourceTree = "<group>"; };
 		3DC7B7CE24603A8300D0F702 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		3DC7B7D024603B4400D0F702 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -252,7 +256,7 @@
 		3DB87B31245FFF750079C611 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				3DB87B20245FECD60079C611 /* Category+Extension.swift */,
+				3DB87B20245FECD60079C611 /* Transaction+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -261,7 +265,9 @@
 			isa = PBXGroup;
 			children = (
 				3DC7B7CE24603A8300D0F702 /* HTTPMethod.swift */,
+				3DC0B2A82460944C00A06708 /* ExchangeRateEndPoint.swift */,
 				3DC7B7D024603B4400D0F702 /* NetworkManager.swift */,
+				3DC0B2AA2460947D00A06708 /* Router.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -400,9 +406,11 @@
 			files = (
 				3DC7B7D124603B4400D0F702 /* NetworkManager.swift in Sources */,
 				3DB87B27245FF93F0079C611 /* OverviewViewModel.swift in Sources */,
+				3DC0B2AB2460947D00A06708 /* Router.swift in Sources */,
 				3DB87B2B245FF9EB0079C611 /* UIView+Extension.swift in Sources */,
 				3D20D0F624605E79000AD253 /* AddTransactionViewModel.swift in Sources */,
 				3D5C5155246044CF0064584E /* Exchange.swift in Sources */,
+				3DC0B2A92460944C00A06708 /* ExchangeRateEndPoint.swift in Sources */,
 				3DB87B29245FF9600079C611 /* TransactionViewCell.swift in Sources */,
 				3DC0B2A7246086E300A06708 /* Date+Extension.swift in Sources */,
 				3D9ECD61245FC35F00CA91BC /* CategoryType.swift in Sources */,
@@ -414,7 +422,7 @@
 				3D20D0FB246067C9000AD253 /* String+Extension.swift in Sources */,
 				3D9ECD38245FC30500CA91BC /* BudgetFun.xcdatamodeld in Sources */,
 				3D9ECD6B245FD0AD00CA91BC /* CategoryViewController.swift in Sources */,
-				3DB87B21245FECD60079C611 /* Category+Extension.swift in Sources */,
+				3DB87B21245FECD60079C611 /* Transaction+Extension.swift in Sources */,
 				3D20D0F924606698000AD253 /* CurrencyField.swift in Sources */,
 				3DB87B2E245FFD070079C611 /* AddTransactionViewController.swift in Sources */,
 				3DC7B7CF24603A8300D0F702 /* HTTPMethod.swift in Sources */,
