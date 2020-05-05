@@ -9,11 +9,11 @@
 import Foundation
 
 struct Exchange: Codable {
-    private var source: String
-    private var timestamp: Int
-    private var quotes: [String: Double]
-    private var privacy: String
-    private var terms: String
+    var source: String
+    var timestamp: Int
+    var quotes: [String: Double]
+    var privacy: String
+    var terms: String
 }
 
 extension Exchange {

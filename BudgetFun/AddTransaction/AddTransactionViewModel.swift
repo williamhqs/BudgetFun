@@ -10,8 +10,12 @@ import Foundation
 
 final class AddTransactionViewModel {
 
+    var currency: Currency = .USD
+    var currecyRate: Double?
+    var enableConfirm: ((Bool)->Void)?
+    
     var isValid: Bool {
-        return selectedCategory != nil && inputAmount != 0.00
+        return selectedCategory != nil && inputAmount != nil && inputAmount != 0.00
     }
     
     var selectedCategory: Category? {
@@ -19,14 +23,12 @@ final class AddTransactionViewModel {
             enableConfirm?(isValid)
         }
     }
+    
     var inputAmount: Decimal? {
         didSet {
             enableConfirm?(isValid)
         }
     }
-    var currency: Currency = .USD
-    var currecyRate: Double?
-    var enableConfirm: ((Bool)->Void)?
     
     var selectedCurrecyIndex: Int = 0 {
         didSet {
@@ -60,7 +62,7 @@ final class AddTransactionViewModel {
         }
     }
     
-    func add() {
+    func add(_ coreDataManager: CoreDataManager = CoreDataManager()) {
         
         guard let category = selectedCategory else {
             #warning("Validate alert, category can't be nil")
@@ -72,7 +74,7 @@ final class AddTransactionViewModel {
             return
         }
         
-        Transaction.create(category: category, amount: amount, currency: currency)
+        Transaction.create(coreDataManager: coreDataManager, category: category, amount: amount, currency: currency)
 
     }
     

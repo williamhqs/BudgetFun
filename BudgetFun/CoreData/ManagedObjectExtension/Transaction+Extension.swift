@@ -20,16 +20,10 @@ extension Transaction {
             transaction?.amount = amount as NSDecimalNumber
             transaction?.currenceType = currency.rawValue
             transaction?.createdAt = Date()
+            coreDataManager.saveContext(context)
         } catch {
             print(error.localizedDescription)
         }
-        
-        context.perform {
-            do {
-                try context.save()
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
+ 
     }
 }

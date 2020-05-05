@@ -9,7 +9,7 @@
 import XCTest
 @testable import BudgetFun
 
-class UIViewCellTest: XCTestCase {
+class UIViewExtensionTest: XCTestCase {
 
     func testIdentifier() throws {
         XCTAssertTrue(CategoryViewCell.identifier == "CategoryViewCell")

@@ -24,7 +24,6 @@
 		3D9ECD6D245FD18700CA91BC /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD6C245FD18700CA91BC /* OverviewViewController.swift */; };
 		3D9ECD6F245FDB5700CA91BC /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD6E245FDB5700CA91BC /* CategoryViewModel.swift */; };
 		3D9ECD73245FDED800CA91BC /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD72245FDED800CA91BC /* CategoryViewCell.swift */; };
-		3D9ECD7D245FE08600CA91BC /* UIViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD7C245FE08600CA91BC /* UIViewCellTest.swift */; };
 		3DB87B21245FECD60079C611 /* Transaction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B20245FECD60079C611 /* Transaction+Extension.swift */; };
 		3DB87B23245FED000079C611 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B22245FED000079C611 /* UIColor+Extension.swift */; };
 		3DB87B27245FF93F0079C611 /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B26245FF93F0079C611 /* OverviewViewModel.swift */; };
@@ -38,6 +37,10 @@
 		3DC0B2AB2460947D00A06708 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2AA2460947D00A06708 /* Router.swift */; };
 		3DC0B2AF2461145100A06708 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2AE2461145100A06708 /* UIViewController+Extension.swift */; };
 		3DC0B2B22461196D00A06708 /* ConstantString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2B12461196D00A06708 /* ConstantString.swift */; };
+		3DC0B2B424611DF400A06708 /* UIViewExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2B324611DF300A06708 /* UIViewExtensionTest.swift */; };
+		3DC0B2B92461200600A06708 /* AddTransactionViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2B82461200600A06708 /* AddTransactionViewModelTest.swift */; };
+		3DC0B2BB2461253000A06708 /* NSManagedObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2BA2461253000A06708 /* NSManagedObject+Extension.swift */; };
+		3DC0B2C0246126D200A06708 /* CoreDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2BF246126D200A06708 /* CoreDataManagerTest.swift */; };
 		3DC7B7CC24602EC300D0F702 /* Currecy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7CB24602EC300D0F702 /* Currecy.swift */; };
 		3DC7B7CF24603A8300D0F702 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7CE24603A8300D0F702 /* HTTPMethod.swift */; };
 		3DC7B7D124603B4400D0F702 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7D024603B4400D0F702 /* NetworkManager.swift */; };
@@ -84,7 +87,6 @@
 		3D9ECD6C245FD18700CA91BC /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		3D9ECD6E245FDB5700CA91BC /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		3D9ECD72245FDED800CA91BC /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
-		3D9ECD7C245FE08600CA91BC /* UIViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewCellTest.swift; sourceTree = "<group>"; };
 		3DB87B20245FECD60079C611 /* Transaction+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+Extension.swift"; sourceTree = "<group>"; };
 		3DB87B22245FED000079C611 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3DB87B26245FF93F0079C611 /* OverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
@@ -98,6 +100,10 @@
 		3DC0B2AA2460947D00A06708 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		3DC0B2AE2461145100A06708 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		3DC0B2B12461196D00A06708 /* ConstantString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantString.swift; sourceTree = "<group>"; };
+		3DC0B2B324611DF300A06708 /* UIViewExtensionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTest.swift; sourceTree = "<group>"; };
+		3DC0B2B82461200600A06708 /* AddTransactionViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModelTest.swift; sourceTree = "<group>"; };
+		3DC0B2BA2461253000A06708 /* NSManagedObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extension.swift"; sourceTree = "<group>"; };
+		3DC0B2BF246126D200A06708 /* CoreDataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTest.swift; sourceTree = "<group>"; };
 		3DC7B7CB24602EC300D0F702 /* Currecy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currecy.swift; sourceTree = "<group>"; };
 		3DC7B7CE24603A8300D0F702 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		3DC7B7D024603B4400D0F702 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -182,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				3D9ECD47245FC30700CA91BC /* BudgetFunTests.swift */,
+				3DC0B2BC246126A900A06708 /* CoreDataTest */,
+				3DC0B2B724611FF400A06708 /* ViewModelTest */,
 				3D9ECD7B245FE06500CA91BC /* ExtensionsTest */,
 				3D9ECD49245FC30700CA91BC /* Info.plist */,
 			);
@@ -212,7 +220,7 @@
 		3D9ECD7B245FE06500CA91BC /* ExtensionsTest */ = {
 			isa = PBXGroup;
 			children = (
-				3D9ECD7C245FE08600CA91BC /* UIViewCellTest.swift */,
+				3DC0B2B324611DF300A06708 /* UIViewExtensionTest.swift */,
 			);
 			path = ExtensionsTest;
 			sourceTree = "<group>";
@@ -262,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				3DB87B20245FECD60079C611 /* Transaction+Extension.swift */,
+				3DC0B2BA2461253000A06708 /* NSManagedObject+Extension.swift */,
 			);
 			path = ManagedObjectExtension;
 			sourceTree = "<group>";
@@ -272,6 +281,22 @@
 				3DC0B2B12461196D00A06708 /* ConstantString.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		3DC0B2B724611FF400A06708 /* ViewModelTest */ = {
+			isa = PBXGroup;
+			children = (
+				3DC0B2B82461200600A06708 /* AddTransactionViewModelTest.swift */,
+			);
+			path = ViewModelTest;
+			sourceTree = "<group>";
+		};
+		3DC0B2BC246126A900A06708 /* CoreDataTest */ = {
+			isa = PBXGroup;
+			children = (
+				3DC0B2BF246126D200A06708 /* CoreDataManagerTest.swift */,
+			);
+			path = CoreDataTest;
 			sourceTree = "<group>";
 		};
 		3DC7B7CD246039C700D0F702 /* Networking */ = {
@@ -425,6 +450,7 @@
 				3D20D0F624605E79000AD253 /* AddTransactionViewModel.swift in Sources */,
 				3D5C5155246044CF0064584E /* Exchange.swift in Sources */,
 				3DC0B2A92460944C00A06708 /* ExchangeRateEndPoint.swift in Sources */,
+				3DC0B2BB2461253000A06708 /* NSManagedObject+Extension.swift in Sources */,
 				3DB87B29245FF9600079C611 /* TransactionViewCell.swift in Sources */,
 				3DC0B2A7246086E300A06708 /* Date+Extension.swift in Sources */,
 				3D9ECD61245FC35F00CA91BC /* CategoryType.swift in Sources */,
@@ -452,7 +478,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D9ECD7D245FE08600CA91BC /* UIViewCellTest.swift in Sources */,
+				3DC0B2B92461200600A06708 /* AddTransactionViewModelTest.swift in Sources */,
+				3DC0B2B424611DF400A06708 /* UIViewExtensionTest.swift in Sources */,
+				3DC0B2C0246126D200A06708 /* CoreDataManagerTest.swift in Sources */,
 				3D9ECD48245FC30700CA91BC /* BudgetFunTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
