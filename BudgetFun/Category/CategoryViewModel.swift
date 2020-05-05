@@ -15,9 +15,10 @@ final class CategoryViewModel {
     
     var categorySectionCount = CategoryType.allCases.count
     var selectedCategory: Category?
+    var coreDataManager = CoreDataManager()
     
     func preloadCategories() {
-        let categories = CoreDataManager().get(type: Category.self)
+        let categories = coreDataManager.get(type: Category.self)
         guard categories.count == 0 else {
             return
         }
@@ -40,7 +41,7 @@ final class CategoryViewModel {
     var fetchedResultsController: NSFetchedResultsController<Category> {
         let fetchedRequest: NSFetchRequest<Category> = Category.fetchRequest()
         fetchedRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
-        let controller = NSFetchedResultsController(fetchRequest: fetchedRequest, managedObjectContext: CoreDataManager().persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        let controller = NSFetchedResultsController(fetchRequest: fetchedRequest, managedObjectContext: coreDataManager.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
         do {
             try controller.performFetch()
         } catch {

@@ -13,6 +13,7 @@ final class AddTransactionViewModel {
     var currency: Currency = .USD
     var currecyRate: Double?
     var enableConfirm: ((Bool)->Void)?
+    private let networkManager = NetworkManager()
     
     var isValid: Bool {
         return selectedCategory != nil && inputAmount != nil && inputAmount != 0.00
@@ -56,8 +57,12 @@ final class AddTransactionViewModel {
         }
     }
     
+    func cancelRequest() {
+        networkManager.cancel()
+    }
+    
     private func getCurrencyRate () {
-        NetworkManager().requestCurrencyRate { (exchange) in
+        networkManager.requestCurrencyRate { (exchange) in
             self.currecyRate = exchange?.quote(targetCurrency: .NZD)
         }
     }

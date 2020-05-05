@@ -43,11 +43,7 @@ class CoreDataManager {
             }
         }
     }
-    
-    
-//    func create<T>(_ type: T.Type, on context: NSManagedObjectContext, generatingBlock: ((inout T) -> ())) -> T where T : NSManagedObject {
-//
-//    }
+
 }
 
 // MARK: - Query
@@ -77,44 +73,6 @@ extension CoreDataManager {
     }
     
     func newWithoutSaving<T: NSManagedObject>(_ type: T.Type, in context: NSManagedObjectContext) -> T? {
-        var entity: NSEntityDescription?
-        context.performAndWait {
-            entity = NSEntityDescription.entity(forEntityName: T.entityName, in: context)
-        }
-        
-        let result = NSManagedObject(entity: entity!, insertInto: context) as? T
-        
-        assert(result != nil, "Failed to create managed object for type \(type)")
-        
-        return result
-    }
-    
-    /// Update from background queue
-    
-    func insert<T: NSManagedObject>(_ type: T.Type, assignCallback: @escaping (T?) -> Void, completion: ((T?) -> Void)? = nil)  {
-        let backgroundContext = newBackgroundContext()
-        backgroundContext.perform {
-            let entity =  NSEntityDescription.entity(forEntityName: T.entityName, in: backgroundContext)
-            let object = NSManagedObject(entity: entity!, insertInto: backgroundContext) as? T
-            do {
-                if backgroundContext.hasChanges {
-                    do {
-                        try backgroundContext.save()
-                        backgroundContext.reset()
-                    } catch {
-                        print("error \(error)")
-                    }
-                }
-                
-                
-            } catch {
-                print("Error on saving created object: \(error)")
-            }
-        }
-        
-    }
-    
-    func create<T: NSManagedObject>(_ type: T.Type, in context: NSManagedObjectContext) -> T? {
         var entity: NSEntityDescription?
         context.performAndWait {
             entity = NSEntityDescription.entity(forEntityName: T.entityName, in: context)
