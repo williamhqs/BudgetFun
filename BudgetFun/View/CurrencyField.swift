@@ -11,6 +11,7 @@ import UIKit
 class CurrencyField: UITextField {
     
     private var lastValue: String?
+    
     var maximum: Decimal = 999_999_999.99
     
     var decimal: Decimal {
@@ -46,4 +47,8 @@ class CurrencyField: UITextField {
         lastValue = text
     }
     
+}
+
+extension CurrencyField {
+    var doubleValue: Double { (decimal as NSDecimalNumber).doubleValue }
 }

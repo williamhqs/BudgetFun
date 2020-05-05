@@ -8,7 +8,7 @@
 
 import CoreData
 
-class OverviewViewModel {
+struct OverviewViewModel {
     
     var fetchedResultsController: NSFetchedResultsController<Transaction> {
         let fetchedRequest: NSFetchRequest<Transaction> = Transaction.fetchRequest()

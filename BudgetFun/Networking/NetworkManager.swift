@@ -8,7 +8,7 @@
 
 import Foundation
 
-//http://api.currencylayer.com/live?access_key=36b0e345ffc4462050d474c59ea730fe&currencies=USD,NZD&format=1
+#warning("This can be used for testing quote live http://api.currencylayer.com/live?access_key=36b0e345ffc4462050d474c59ea730fe&currencies=USD,NZD&format=1")
 struct NetworkManager {
     
     private let router = Router()

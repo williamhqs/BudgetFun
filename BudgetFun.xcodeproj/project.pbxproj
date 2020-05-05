@@ -25,7 +25,6 @@
 		3D9ECD6F245FDB5700CA91BC /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD6E245FDB5700CA91BC /* CategoryViewModel.swift */; };
 		3D9ECD73245FDED800CA91BC /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9ECD72245FDED800CA91BC /* CategoryViewCell.swift */; };
 		3DB87B21245FECD60079C611 /* Transaction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B20245FECD60079C611 /* Transaction+Extension.swift */; };
-		3DB87B23245FED000079C611 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B22245FED000079C611 /* UIColor+Extension.swift */; };
 		3DB87B27245FF93F0079C611 /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B26245FF93F0079C611 /* OverviewViewModel.swift */; };
 		3DB87B29245FF9600079C611 /* TransactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B28245FF9600079C611 /* TransactionViewCell.swift */; };
 		3DB87B2B245FF9EB0079C611 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB87B2A245FF9EB0079C611 /* UIView+Extension.swift */; };
@@ -41,6 +40,11 @@
 		3DC0B2B92461200600A06708 /* AddTransactionViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2B82461200600A06708 /* AddTransactionViewModelTest.swift */; };
 		3DC0B2BB2461253000A06708 /* NSManagedObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2BA2461253000A06708 /* NSManagedObject+Extension.swift */; };
 		3DC0B2C0246126D200A06708 /* CoreDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2BF246126D200A06708 /* CoreDataManagerTest.swift */; };
+		3DC0B2CA24614EA000A06708 /* NumberFormatter+Exension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2C924614EA000A06708 /* NumberFormatter+Exension.swift */; };
+		3DC0B2CC24614ECD00A06708 /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2CB24614ECD00A06708 /* Decimal+Extension.swift */; };
+		3DC0B2CE24614EE600A06708 /* LosslessStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2CD24614EE600A06708 /* LosslessStringConvertible.swift */; };
+		3DC0B2D024614F1800A06708 /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2CF24614F1800A06708 /* TextField+Extension.swift */; };
+		3DC0B2D224614F3F00A06708 /* Formatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2D124614F3F00A06708 /* Formatter+Extension.swift */; };
 		3DC7B7CC24602EC300D0F702 /* Currecy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7CB24602EC300D0F702 /* Currecy.swift */; };
 		3DC7B7CF24603A8300D0F702 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7CE24603A8300D0F702 /* HTTPMethod.swift */; };
 		3DC7B7D124603B4400D0F702 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7D024603B4400D0F702 /* NetworkManager.swift */; };
@@ -88,7 +92,6 @@
 		3D9ECD6E245FDB5700CA91BC /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		3D9ECD72245FDED800CA91BC /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		3DB87B20245FECD60079C611 /* Transaction+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+Extension.swift"; sourceTree = "<group>"; };
-		3DB87B22245FED000079C611 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3DB87B26245FF93F0079C611 /* OverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
 		3DB87B28245FF9600079C611 /* TransactionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewCell.swift; sourceTree = "<group>"; };
 		3DB87B2A245FF9EB0079C611 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -104,6 +107,11 @@
 		3DC0B2B82461200600A06708 /* AddTransactionViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModelTest.swift; sourceTree = "<group>"; };
 		3DC0B2BA2461253000A06708 /* NSManagedObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extension.swift"; sourceTree = "<group>"; };
 		3DC0B2BF246126D200A06708 /* CoreDataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTest.swift; sourceTree = "<group>"; };
+		3DC0B2C924614EA000A06708 /* NumberFormatter+Exension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Exension.swift"; sourceTree = "<group>"; };
+		3DC0B2CB24614ECD00A06708 /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
+		3DC0B2CD24614EE600A06708 /* LosslessStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosslessStringConvertible.swift; sourceTree = "<group>"; };
+		3DC0B2CF24614F1800A06708 /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
+		3DC0B2D124614F3F00A06708 /* Formatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Extension.swift"; sourceTree = "<group>"; };
 		3DC7B7CB24602EC300D0F702 /* Currecy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currecy.swift; sourceTree = "<group>"; };
 		3DC7B7CE24603A8300D0F702 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		3DC7B7D024603B4400D0F702 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -210,9 +218,13 @@
 			children = (
 				3DB87B2A245FF9EB0079C611 /* UIView+Extension.swift */,
 				3DC0B2AE2461145100A06708 /* UIViewController+Extension.swift */,
-				3DB87B22245FED000079C611 /* UIColor+Extension.swift */,
 				3D20D0FA246067C9000AD253 /* String+Extension.swift */,
+				3DC0B2CB24614ECD00A06708 /* Decimal+Extension.swift */,
+				3DC0B2C924614EA000A06708 /* NumberFormatter+Exension.swift */,
 				3DC0B2A6246086E300A06708 /* Date+Extension.swift */,
+				3DC0B2CF24614F1800A06708 /* TextField+Extension.swift */,
+				3DC0B2CD24614EE600A06708 /* LosslessStringConvertible.swift */,
+				3DC0B2D124614F3F00A06708 /* Formatter+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -444,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DC7B7D124603B4400D0F702 /* NetworkManager.swift in Sources */,
+				3DC0B2CC24614ECD00A06708 /* Decimal+Extension.swift in Sources */,
 				3DB87B27245FF93F0079C611 /* OverviewViewModel.swift in Sources */,
 				3DC0B2AB2460947D00A06708 /* Router.swift in Sources */,
 				3DB87B2B245FF9EB0079C611 /* UIView+Extension.swift in Sources */,
@@ -452,19 +465,22 @@
 				3DC0B2A92460944C00A06708 /* ExchangeRateEndPoint.swift in Sources */,
 				3DC0B2BB2461253000A06708 /* NSManagedObject+Extension.swift in Sources */,
 				3DB87B29245FF9600079C611 /* TransactionViewCell.swift in Sources */,
+				3DC0B2CE24614EE600A06708 /* LosslessStringConvertible.swift in Sources */,
 				3DC0B2A7246086E300A06708 /* Date+Extension.swift in Sources */,
 				3D9ECD61245FC35F00CA91BC /* CategoryType.swift in Sources */,
-				3DB87B23245FED000079C611 /* UIColor+Extension.swift in Sources */,
 				3D9ECD6D245FD18700CA91BC /* OverviewViewController.swift in Sources */,
 				3D9ECD2E245FC30500CA91BC /* AppDelegate.swift in Sources */,
 				3DC7B7CC24602EC300D0F702 /* Currecy.swift in Sources */,
+				3DC0B2D224614F3F00A06708 /* Formatter+Extension.swift in Sources */,
 				3DC0B2AF2461145100A06708 /* UIViewController+Extension.swift in Sources */,
 				3D9ECD6F245FDB5700CA91BC /* CategoryViewModel.swift in Sources */,
 				3D20D0FB246067C9000AD253 /* String+Extension.swift in Sources */,
 				3D9ECD38245FC30500CA91BC /* BudgetFun.xcdatamodeld in Sources */,
+				3DC0B2CA24614EA000A06708 /* NumberFormatter+Exension.swift in Sources */,
 				3D9ECD6B245FD0AD00CA91BC /* CategoryViewController.swift in Sources */,
 				3DB87B21245FECD60079C611 /* Transaction+Extension.swift in Sources */,
 				3DC0B2B22461196D00A06708 /* ConstantString.swift in Sources */,
+				3DC0B2D024614F1800A06708 /* TextField+Extension.swift in Sources */,
 				3D20D0F924606698000AD253 /* CurrencyField.swift in Sources */,
 				3DB87B2E245FFD070079C611 /* AddTransactionViewController.swift in Sources */,
 				3DC7B7CF24603A8300D0F702 /* HTTPMethod.swift in Sources */,
