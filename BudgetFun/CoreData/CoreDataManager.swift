@@ -106,6 +106,7 @@ extension CoreDataManager {
                     }
                 }
                 
+                
             } catch {
                 print("Error on saving created object: \(error)")
             }

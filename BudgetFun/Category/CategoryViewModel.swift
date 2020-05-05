@@ -24,7 +24,7 @@ final class CategoryViewModel {
         var categoryArray = [Category]()
         for index in 0...3 {
             let newCategory = Category(context: context)
-            newCategory.name = "Bill" + String(index)
+            newCategory.name = "Category" + String(index)
             newCategory.color = [UIColor.blue, .red, .green, .cyan][index]
             newCategory.type = CategoryType.default.rawValue
             categoryArray.append(newCategory)

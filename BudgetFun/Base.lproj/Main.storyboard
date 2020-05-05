@@ -112,15 +112,15 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nph-xG-EB8">
-                                                    <rect key="frame" x="331" y="32" width="31" height="42"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="320" y="32" width="42" height="42"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 day ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rr-G6-QDT">
                                                     <rect key="frame" x="289" y="77.5" width="73" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4j-Xx-b55">
@@ -139,6 +139,8 @@
                                                 <constraint firstItem="nph-xG-EB8" firstAttribute="top" secondItem="jEB-Qi-0fE" secondAttribute="top" constant="32" id="R4s-yt-0RT"/>
                                                 <constraint firstItem="xr6-4x-KNA" firstAttribute="centerY" secondItem="jEB-Qi-0fE" secondAttribute="centerY" id="Ywg-eX-Ass"/>
                                                 <constraint firstItem="1rr-G6-QDT" firstAttribute="trailing" secondItem="nph-xG-EB8" secondAttribute="trailing" id="aYx-Br-ZGP"/>
+                                                <constraint firstItem="nph-xG-EB8" firstAttribute="leading" relation="lessThanOrEqual" secondItem="xr6-4x-KNA" secondAttribute="trailing" constant="255" id="eYn-K6-CzM"/>
+                                                <constraint firstItem="1rr-G6-QDT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jEB-Qi-0fE" secondAttribute="leading" id="gBm-fl-iLI"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="nph-xG-EB8" secondAttribute="trailing" constant="32" id="oet-eW-P6S"/>
                                                 <constraint firstAttribute="bottom" secondItem="1rr-G6-QDT" secondAttribute="bottom" constant="8" id="xSt-y0-WkM"/>
                                                 <constraint firstItem="xr6-4x-KNA" firstAttribute="leading" secondItem="H4j-Xx-b55" secondAttribute="trailing" constant="8" id="xbP-hv-Crw"/>

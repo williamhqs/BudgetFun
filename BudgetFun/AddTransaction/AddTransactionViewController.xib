@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="categoryColor" destination="J3k-mv-0Sg" id="oFa-Cr-Gv1"/>
                 <outlet property="categoryName" destination="rkH-d2-Mff" id="e6b-jL-ekR"/>
+                <outlet property="confirmButton" destination="oD8-3t-G17" id="trc-yO-hPG"/>
                 <outlet property="currencyAmountTextField" destination="ssO-w6-2iF" id="s1g-d4-zM6"/>
                 <outlet property="currencySegmentControl" destination="f2r-OG-VhM" id="cZn-dt-lzN"/>
                 <outlet property="currencySign" destination="PXW-f6-HdH" id="a7g-Iy-I4b"/>
@@ -52,13 +53,6 @@
                         <action selector="selectCategoryPressed:" destination="-1" eventType="touchUpInside" id="EWU-h1-rLy"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD8-3t-G17">
-                    <rect key="frame" x="32" y="782" width="350" height="30"/>
-                    <state key="normal" title="Confirm"/>
-                    <connections>
-                        <action selector="confirmButtonPressed:" destination="-1" eventType="touchUpInside" id="TZo-Xy-acF"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxV-B1-MmD">
                     <rect key="frame" x="16" y="76" width="54" height="30"/>
                     <state key="normal" title="Dismiss"/>
@@ -79,7 +73,7 @@
                 </segmentedControl>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3k-mv-0Sg">
                     <rect key="frame" x="182" y="382" width="50" height="50"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="qlx-Om-Agc"/>
                         <constraint firstAttribute="height" constant="50" id="vKD-M7-tzy"/>
@@ -91,6 +85,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD8-3t-G17">
+                    <rect key="frame" x="327" y="76" width="55" height="30"/>
+                    <state key="normal" title="Confirm"/>
+                    <connections>
+                        <action selector="confirmButtonPressed:" destination="-1" eventType="touchUpInside" id="TZo-Xy-acF"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
@@ -101,19 +102,18 @@
                 <constraint firstItem="hSV-gs-Um8" firstAttribute="trailing" secondItem="ssO-w6-2iF" secondAttribute="trailing" id="6Q3-af-DSR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V9A-u0-Qvt" secondAttribute="trailing" constant="32" id="72P-UH-as3"/>
                 <constraint firstItem="ssO-w6-2iF" firstAttribute="leading" secondItem="PXW-f6-HdH" secondAttribute="trailing" constant="8" id="7ZS-f8-Fki"/>
-                <constraint firstItem="oD8-3t-G17" firstAttribute="leading" secondItem="hSV-gs-Um8" secondAttribute="leading" id="AhF-u0-uUR"/>
+                <constraint firstItem="oD8-3t-G17" firstAttribute="top" secondItem="IxV-B1-MmD" secondAttribute="top" id="9zy-LT-Mif"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ssO-w6-2iF" secondAttribute="trailing" constant="32" id="Ako-7l-85c"/>
                 <constraint firstItem="PXW-f6-HdH" firstAttribute="top" secondItem="V9A-u0-Qvt" secondAttribute="bottom" constant="16" id="D7r-C4-VpN"/>
                 <constraint firstItem="hSV-gs-Um8" firstAttribute="leading" secondItem="f2r-OG-VhM" secondAttribute="leading" id="DTp-dg-IPy"/>
-                <constraint firstItem="oD8-3t-G17" firstAttribute="trailing" secondItem="hSV-gs-Um8" secondAttribute="trailing" id="EMn-wM-o5p"/>
                 <constraint firstItem="jAp-Fv-MVR" firstAttribute="top" secondItem="ssO-w6-2iF" secondAttribute="bottom" constant="32" id="M37-pt-60a"/>
                 <constraint firstItem="J3k-mv-0Sg" firstAttribute="top" secondItem="hSV-gs-Um8" secondAttribute="bottom" constant="32" id="MJV-U4-Kqw"/>
                 <constraint firstItem="jAp-Fv-MVR" firstAttribute="leading" secondItem="V9A-u0-Qvt" secondAttribute="leading" id="NCB-4s-tXc"/>
+                <constraint firstAttribute="trailing" secondItem="oD8-3t-G17" secondAttribute="trailing" constant="32" id="OWN-cB-MhW"/>
                 <constraint firstItem="rkH-d2-Mff" firstAttribute="centerX" secondItem="J3k-mv-0Sg" secondAttribute="centerX" id="VWv-Tn-Nkw"/>
                 <constraint firstItem="V9A-u0-Qvt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="VZG-vr-eJB"/>
                 <constraint firstItem="ssO-w6-2iF" firstAttribute="top" secondItem="V9A-u0-Qvt" secondAttribute="bottom" constant="11" id="ZeR-ca-oKf"/>
                 <constraint firstItem="f2r-OG-VhM" firstAttribute="top" secondItem="jAp-Fv-MVR" secondAttribute="bottom" constant="16" id="gvE-Z2-bmy"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oD8-3t-G17" secondAttribute="bottom" constant="50" id="n3H-15-DhJ"/>
                 <constraint firstItem="hSV-gs-Um8" firstAttribute="top" secondItem="f2r-OG-VhM" secondAttribute="bottom" constant="16" id="qz0-pE-Jbg"/>
                 <constraint firstItem="IxV-B1-MmD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="uaY-GZ-Ckr"/>
                 <constraint firstItem="rkH-d2-Mff" firstAttribute="top" secondItem="J3k-mv-0Sg" secondAttribute="bottom" constant="8" id="w8E-XM-bYc"/>

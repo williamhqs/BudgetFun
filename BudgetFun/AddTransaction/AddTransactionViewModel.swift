@@ -10,10 +10,23 @@ import Foundation
 
 final class AddTransactionViewModel {
 
-    var selectedCategory: Category?
-    var inputAmount: Decimal?
+    var isValid: Bool {
+        return selectedCategory != nil && inputAmount != 0.00
+    }
+    
+    var selectedCategory: Category? {
+        didSet {
+            enableConfirm?(isValid)
+        }
+    }
+    var inputAmount: Decimal? {
+        didSet {
+            enableConfirm?(isValid)
+        }
+    }
     var currency: Currency = .USD
     var currecyRate: Double?
+    var enableConfirm: ((Bool)->Void)?
     
     var selectedCurrecyIndex: Int = 0 {
         didSet {

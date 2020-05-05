@@ -15,6 +15,7 @@ final class AddTransactionViewController: UIViewController {
     @IBOutlet weak var currencySegmentControl: UISegmentedControl!
     @IBOutlet weak var categoryColor: UIView!
     @IBOutlet weak var categoryName: UILabel!
+    @IBOutlet weak var confirmButton: UIButton!
     
     let viewModel = AddTransactionViewModel()
     
@@ -36,7 +37,11 @@ final class AddTransactionViewController: UIViewController {
         }
         currencySign.text = viewModel.currency.sign
         categoryColor.layer.cornerRadius = 5.0
-        
+        confirmButton.isEnabled = false
+        viewModel.enableConfirm = { [weak self] isEnable in
+            guard let self = self else { return }
+            self.confirmButton.isEnabled = isEnable
+        }
     }
 
 }

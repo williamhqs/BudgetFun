@@ -15,8 +15,17 @@ class TransactionViewCell: UITableViewCell {
     @IBOutlet weak var createdAtLabel: UILabel!
     @IBOutlet weak var categoryColorView: UIView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        categoryColorView.layer.cornerRadius = 5.0
+    }
+    
     func configure(by transaction: Transaction) {
-        amountLabel.text = transaction.amount?.stringValue
+        
+        guard let amount = transaction.amount, let type = transaction.currenceType else {
+            return
+        }
+        amountLabel.text = type + amount.stringValue
         categoryNameLabel.text = transaction.category?.name
         categoryColorView.backgroundColor = transaction.category?.color as? UIColor
         createdAtLabel.text = transaction.createdAt?.timestampString
