@@ -26,9 +26,9 @@ class TransactionViewCell: UITableViewCell {
             return
         }
         amountLabel.text = type + amount.stringValue
-        categoryNameLabel.text = transaction.category?.name
+        categoryNameLabel.text = transaction.category?.name?.localized
         categoryColorView.backgroundColor = transaction.category?.color as? UIColor
-        createdAtLabel.text = transaction.createdAt?.timestampString
+        createdAtLabel.text = transaction.createdAt?.timestampString?.localized
     }
     
 }

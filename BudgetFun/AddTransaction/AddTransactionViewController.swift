@@ -54,7 +54,7 @@ extension AddTransactionViewController {
         let categoryViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: CategoryViewController.identifier) as! CategoryViewController
         #warning("No need [weak self] here, the closure doesn't owned(comment should be removed)")
         categoryViewController.didSelectCategory = { category in
-            self.categoryName.text = category.name
+            self.categoryName.text = category.name?.localized
             if let color = category.color as? UIColor {
                 self.categoryColor.backgroundColor = color
             }

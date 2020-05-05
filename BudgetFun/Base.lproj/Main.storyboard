@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Category-->
+        <!--Category View Controller-->
         <scene sceneID="H8d-vD-eOD">
             <objects>
                 <viewController storyboardIdentifier="CategoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RPa-Bw-CfT" customClass="CategoryViewController" customModule="BudgetFun" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8lO-UQ-NXN">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1sa-FG-KS2">
                                     <size key="itemSize" width="190" height="176"/>
@@ -77,14 +77,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GiU-Pg-RH4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Category" id="pb9-OA-Hik"/>
+                    <navigationItem key="navigationItem" id="O86-mS-HiW"/>
                     <connections>
                         <outlet property="collectionView" destination="8lO-UQ-NXN" id="Z7u-sX-aG6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bda-5F-7cO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="576.81159420289862" y="246.42857142857142"/>
+            <point key="canvasLocation" x="1486.9565217391305" y="246.42857142857142"/>
         </scene>
         <!--Title-->
         <scene sceneID="oil-lM-huI">
@@ -189,7 +189,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="IKZ-jc-dgM" kind="relationship" relationship="viewControllers" id="Ttx-80-1PB"/>
-                        <segue destination="RPa-Bw-CfT" kind="relationship" relationship="viewControllers" id="OOl-eR-4HO"/>
+                        <segue destination="G1Q-aR-7xg" kind="relationship" relationship="viewControllers" id="OOl-eR-4HO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTg-7n-g9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -214,6 +214,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Iv-7Y-w6w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="576.81159420289862" y="-401.11607142857139"/>
+        </scene>
+        <!--Category-->
+        <scene sceneID="z5f-pc-W3d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G1Q-aR-7xg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Category" id="pb9-OA-Hik"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mWb-gq-jdO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RPa-Bw-CfT" kind="relationship" relationship="rootViewController" id="eW5-QV-HFB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xhx-7b-t3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576.81159420289862" y="246.42857142857142"/>
         </scene>
     </scenes>
 </document>

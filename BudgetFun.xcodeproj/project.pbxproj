@@ -37,6 +37,7 @@
 		3DC0B2A92460944C00A06708 /* ExchangeRateEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2A82460944C00A06708 /* ExchangeRateEndPoint.swift */; };
 		3DC0B2AB2460947D00A06708 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2AA2460947D00A06708 /* Router.swift */; };
 		3DC0B2AF2461145100A06708 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2AE2461145100A06708 /* UIViewController+Extension.swift */; };
+		3DC0B2B22461196D00A06708 /* ConstantString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B2B12461196D00A06708 /* ConstantString.swift */; };
 		3DC7B7CC24602EC300D0F702 /* Currecy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7CB24602EC300D0F702 /* Currecy.swift */; };
 		3DC7B7CF24603A8300D0F702 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7CE24603A8300D0F702 /* HTTPMethod.swift */; };
 		3DC7B7D124603B4400D0F702 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B7D024603B4400D0F702 /* NetworkManager.swift */; };
@@ -96,6 +97,7 @@
 		3DC0B2A82460944C00A06708 /* ExchangeRateEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateEndPoint.swift; sourceTree = "<group>"; };
 		3DC0B2AA2460947D00A06708 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		3DC0B2AE2461145100A06708 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		3DC0B2B12461196D00A06708 /* ConstantString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantString.swift; sourceTree = "<group>"; };
 		3DC7B7CB24602EC300D0F702 /* Currecy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currecy.swift; sourceTree = "<group>"; };
 		3DC7B7CE24603A8300D0F702 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		3DC7B7D024603B4400D0F702 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -159,13 +161,12 @@
 			children = (
 				3D9ECD2D245FC30500CA91BC /* AppDelegate.swift */,
 				3D9ECD2F245FC30500CA91BC /* SceneDelegate.swift */,
+				3DC0B2B02461194900A06708 /* Constant */,
 				3D20D0F72460667D000AD253 /* View */,
 				3DC7B7CD246039C700D0F702 /* Networking */,
 				3DB87B30245FFD0F0079C611 /* AddTransaction */,
 				3DB87B25245FF8FD0079C611 /* Overview */,
 				3DB87B24245FF8ED0079C611 /* Category */,
-				3D9ECD60245FC35F00CA91BC /* CategoryType.swift */,
-				3D5C5154246044CF0064584E /* Exchange.swift */,
 				3DB87B1F245FECC40079C611 /* CoreData */,
 				3D9ECD76245FDF9800CA91BC /* Extensions */,
 				3D9ECD33245FC30500CA91BC /* Main.storyboard */,
@@ -228,9 +229,10 @@
 		3DB87B24245FF8ED0079C611 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				3D9ECD60245FC35F00CA91BC /* CategoryType.swift */,
+				3D9ECD6A245FD0AD00CA91BC /* CategoryViewController.swift */,
 				3D9ECD6E245FDB5700CA91BC /* CategoryViewModel.swift */,
 				3D9ECD72245FDED800CA91BC /* CategoryViewCell.swift */,
-				3D9ECD6A245FD0AD00CA91BC /* CategoryViewController.swift */,
 				3DC7B7CB24602EC300D0F702 /* Currecy.swift */,
 			);
 			path = Category;
@@ -264,6 +266,14 @@
 			path = ManagedObjectExtension;
 			sourceTree = "<group>";
 		};
+		3DC0B2B02461194900A06708 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				3DC0B2B12461196D00A06708 /* ConstantString.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		3DC7B7CD246039C700D0F702 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +281,7 @@
 				3DC0B2A82460944C00A06708 /* ExchangeRateEndPoint.swift */,
 				3DC7B7D024603B4400D0F702 /* NetworkManager.swift */,
 				3DC0B2AA2460947D00A06708 /* Router.swift */,
+				3D5C5154246044CF0064584E /* Exchange.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -427,6 +438,7 @@
 				3D9ECD38245FC30500CA91BC /* BudgetFun.xcdatamodeld in Sources */,
 				3D9ECD6B245FD0AD00CA91BC /* CategoryViewController.swift in Sources */,
 				3DB87B21245FECD60079C611 /* Transaction+Extension.swift in Sources */,
+				3DC0B2B22461196D00A06708 /* ConstantString.swift in Sources */,
 				3D20D0F924606698000AD253 /* CurrencyField.swift in Sources */,
 				3DB87B2E245FFD070079C611 /* AddTransactionViewController.swift in Sources */,
 				3DC7B7CF24603A8300D0F702 /* HTTPMethod.swift in Sources */,

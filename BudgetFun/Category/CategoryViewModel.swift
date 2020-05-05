@@ -16,24 +16,38 @@ final class CategoryViewModel {
     var categorySectionCount = CategoryType.allCases.count
     var selectedCategory: Category?
     
-    func preloadCategories(context: NSManagedObjectContext) {
+    func preloadCategories() {
         let categories = CoreDataManager().get(type: Category.self)
         guard categories.count == 0 else {
             return
         }
         var categoryArray = [Category]()
         for index in 0...3 {
-            let newCategory = Category(context: context)
-            newCategory.name = "Category" + String(index)
+            let newCategory = Category(context: fetchedResultsController.managedObjectContext)
+            newCategory.name = ("Category" + String(index)).localized
             newCategory.color = [UIColor.blue, .red, .green, .cyan][index]
             newCategory.type = CategoryType.default.rawValue
             categoryArray.append(newCategory)
         }
         do {
-            try context.save()
+            try fetchedResultsController.managedObjectContext.save()
         } catch {
             let nserror = error as NSError
             print("Unresolved error \(nserror), \(nserror.userInfo)")
         }
     }
+    
+    var fetchedResultsController: NSFetchedResultsController<Category> {
+        let fetchedRequest: NSFetchRequest<Category> = Category.fetchRequest()
+        fetchedRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
+        let controller = NSFetchedResultsController(fetchRequest: fetchedRequest, managedObjectContext: CoreDataManager().persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        do {
+            try controller.performFetch()
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+        return controller
+    }
+    
 }

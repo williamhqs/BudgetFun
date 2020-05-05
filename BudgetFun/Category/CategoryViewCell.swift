@@ -19,7 +19,7 @@ final class CategoryViewCell: UICollectionViewCell {
     }
     
     func configure(by category: Category) {
-        categoryName.text = category.name
+        categoryName.text = category.name?.localized
         categoryColorView.backgroundColor = category.color as? UIColor
     }
 }

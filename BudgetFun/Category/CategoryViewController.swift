@@ -11,23 +11,10 @@ import CoreData
 
 class CategoryViewController: UIViewController {
     
-    let viewModel = CategoryViewModel()
+    private let viewModel = CategoryViewModel()
     var didSelectCategory: ((Category) -> Void)?
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    var fetchedResultsController: NSFetchedResultsController<Category> {
-        let fetchedRequest: NSFetchRequest<Category> = Category.fetchRequest()
-        fetchedRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
-        let controller = NSFetchedResultsController(fetchRequest: fetchedRequest, managedObjectContext: CoreDataManager().persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
-        do {
-            try controller.performFetch()
-        } catch {
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
-        return controller
-    }
     
     private func setupViews() {
         let flow = UICollectionViewFlowLayout()
@@ -39,14 +26,14 @@ class CategoryViewController: UIViewController {
         flow.minimumInteritemSpacing = 1
         flow.minimumLineSpacing = 1
         collectionView.collectionViewLayout = flow
+        title = ConstantString.Category.navigationTitle.rawValue.localized
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
         setupViews()
-        viewModel.preloadCategories(context: fetchedResultsController.managedObjectContext)
-
+        viewModel.preloadCategories()
     }
 
 }
@@ -54,18 +41,18 @@ class CategoryViewController: UIViewController {
 extension CategoryViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return fetchedResultsController.sections?.count ?? 0
+        return viewModel.fetchedResultsController.sections?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let sectionInfo = fetchedResultsController.sections?[section]
+        let sectionInfo = viewModel.fetchedResultsController.sections?[section]
         return sectionInfo?.numberOfObjects ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryViewCell.identifier, for: indexPath) as! CategoryViewCell
-        let category = fetchedResultsController.object(at: indexPath)
+        let category = viewModel.fetchedResultsController.object(at: indexPath)
         cell.configure(by: category)
         return cell
     }
@@ -73,9 +60,9 @@ extension CategoryViewController: UICollectionViewDataSource {
 
 extension CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let category = fetchedResultsController.object(at: indexPath)
+        let category = viewModel.fetchedResultsController.object(at: indexPath)
         didSelectCategory?(category)
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 }
 

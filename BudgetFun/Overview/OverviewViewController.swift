@@ -29,6 +29,7 @@ class OverviewViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewTrsaction))
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 50
+        title = ConstantString.OverView.navigationTitle.rawValue.localized
     }
     
     @objc func addNewTrsaction() {

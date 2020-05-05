@@ -33,6 +33,10 @@ extension StringProtocol where Self: RangeReplaceableCollection {
 
 extension String {
     var decimal: Decimal { Decimal(string: digits) ?? 0 }
+    
+    var localized:String {
+        return NSLocalizedString(self, comment: "")
+    }
 }
 
 extension Decimal {
