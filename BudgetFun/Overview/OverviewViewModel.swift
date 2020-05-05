@@ -12,8 +12,8 @@ class OverviewViewModel {
     
     var fetchedResultsController: NSFetchedResultsController<Transaction> {
         let fetchedRequest: NSFetchRequest<Transaction> = Transaction.fetchRequest()
-        fetchedRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
-        let controller = NSFetchedResultsController(fetchRequest: fetchedRequest, managedObjectContext: CoreDataManager().persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedRequest.sortDescriptors = [NSSortDescriptor(key: #keyPath(Transaction.groupTitle), ascending: false)]
+        let controller = NSFetchedResultsController(fetchRequest: fetchedRequest, managedObjectContext: CoreDataManager().persistentContainer.viewContext, sectionNameKeyPath: #keyPath(Transaction.groupTitle), cacheName: nil)
         do {
             try controller.performFetch()
         } catch {

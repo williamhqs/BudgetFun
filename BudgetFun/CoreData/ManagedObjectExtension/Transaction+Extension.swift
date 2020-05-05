@@ -19,11 +19,14 @@ extension Transaction {
             transaction?.category = category
             transaction?.amount = amount as NSDecimalNumber
             transaction?.currenceType = currency.rawValue
-            transaction?.createdAt = Date()
+            let date = Date()
+            transaction?.createdAt = date
+            transaction?.groupTitle = date.individualDayString
             coreDataManager.saveContext(context)
         } catch {
             print(error.localizedDescription)
         }
  
     }
+    
 }

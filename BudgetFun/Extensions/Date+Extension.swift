@@ -16,4 +16,10 @@ extension Date {
         formatter.allowedUnits = [.year, .month, .day, .hour, .minute, .second]
         return formatter.string(from: self, to: Date())
     }
+    
+    var individualDayString: String {
+        let formater = DateFormatter()
+        formater.dateFormat = "d MMMM yyyy"
+        return formater.string(from: self)
+    }
 }

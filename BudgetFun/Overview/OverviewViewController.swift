@@ -42,6 +42,15 @@ class OverviewViewController: UIViewController {
 }
 
 extension OverviewViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let section = viewModel.fetchedResultsController.sections?[section]
+        return section?.name
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.fetchedResultsController.sections?.count ?? 0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionInfo = viewModel.fetchedResultsController.sections?[section]
         return sectionInfo?.numberOfObjects ?? 0

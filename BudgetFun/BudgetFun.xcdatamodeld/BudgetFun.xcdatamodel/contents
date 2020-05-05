@@ -11,10 +11,11 @@
         <attribute name="amount" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="createdAt" attributeType="Date" defaultDateTimeInterval="610258260" usesScalarValueType="NO"/>
         <attribute name="currenceType" optional="YES" attributeType="String"/>
+        <attribute name="groupTitle" optional="YES" attributeType="String"/>
         <relationship name="category" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="transactions" inverseEntity="Category"/>
     </entity>
     <elements>
         <element name="Category" positionX="-63" positionY="-18" width="128" height="118"/>
-        <element name="Transaction" positionX="-54" positionY="9" width="128" height="103"/>
+        <element name="Transaction" positionX="-54" positionY="9" width="128" height="118"/>
     </elements>
 </model>
