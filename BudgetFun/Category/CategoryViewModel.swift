@@ -40,7 +40,7 @@ final class CategoryViewModel {
     
     var fetchedResultsController: NSFetchedResultsController<Category> {
         let fetchedRequest: NSFetchRequest<Category> = Category.fetchRequest()
-        fetchedRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
+        fetchedRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Category.createdAt, ascending: false)]
         let controller = NSFetchedResultsController(fetchRequest: fetchedRequest, managedObjectContext: coreDataManager.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
         do {
             try controller.performFetch()
