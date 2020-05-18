@@ -59,6 +59,7 @@
                                         <connections>
                                             <outlet property="categoryColorView" destination="SpQ-pH-C7i" id="993-8b-pTD"/>
                                             <outlet property="categoryName" destination="JoF-9A-iO0" id="6hr-cN-PGt"/>
+                                            <segue destination="OBl-33-ON7" kind="show" destinationCreationSelector="showDetails:" id="saY-Vw-uqM"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -84,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bda-5F-7cO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486.9565217391305" y="246.42857142857142"/>
+            <point key="canvasLocation" x="1503" y="246"/>
         </scene>
         <!--Title-->
         <scene sceneID="oil-lM-huI">
@@ -177,6 +178,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YN0-2Y-fGI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1486.9565217391305" y="-401.11607142857139"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="I5O-Mz-Tag">
+            <objects>
+                <hostingController id="OBl-33-ON7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Lnp-5x-DRN"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lz-4n-9ih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2426" y="-201"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pDh-4P-E1B">

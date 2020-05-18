@@ -8,11 +8,18 @@
 
 import UIKit
 import CoreData
+import SwiftUI
 
-class CategoryViewController: UIViewController {
+final class CategoryViewController: UIViewController {
     
     private let viewModel = CategoryViewModel()
     var didSelectCategory: ((Category) -> Void)?
+    let detailsView = DetailsView()
+    
+    @IBSegueAction func showDetails(_ coder: NSCoder) -> UIViewController? {
+        let detailsView = DetailsView()
+        return UIHostingController(coder: coder, rootView: detailsView)
+    }
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -36,6 +43,7 @@ class CategoryViewController: UIViewController {
         viewModel.preloadCategories()
     }
 
+    
 }
 
 extension CategoryViewController: UICollectionViewDataSource {
@@ -60,9 +68,10 @@ extension CategoryViewController: UICollectionViewDataSource {
 
 extension CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let category = viewModel.fetchedResultsController.object(at: indexPath)
-        didSelectCategory?(category)
-        navigationController?.popViewController(animated: true)
+//        let category = viewModel.fetchedResultsController.object(at: indexPath)
+//        didSelectCategory?(category)
+//        navigationController?.popViewController(animated: true)
     }
+    
 }
 
