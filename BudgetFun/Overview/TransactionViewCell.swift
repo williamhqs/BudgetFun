@@ -29,6 +29,19 @@ class TransactionViewCell: UITableViewCell {
         categoryNameLabel.text = transaction.category?.name?.localized
         categoryColorView.backgroundColor = transaction.category?.color as? UIColor
         createdAtLabel.text = transaction.createdAt?.timestampString?.localized
+        
     }
+    
+    func draw(_ text: String, _ rect: CGRect, _ font: UIFont) {
+
+           let paragraphStyle = NSMutableParagraphStyle()
+           paragraphStyle.alignment = .center
+           let attributes = [
+               NSAttributedString.Key.paragraphStyle: paragraphStyle,
+               NSAttributedString.Key.font: font,
+               NSAttributedString.Key.foregroundColor: UIColor.green
+           ]
+           NSAttributedString(string: text, attributes: attributes).draw(in: rect.insetBy(dx: 0, dy: (rect.height - font.pointSize)/2))
+       }
     
 }
