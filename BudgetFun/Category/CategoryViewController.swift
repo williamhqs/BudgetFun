@@ -33,7 +33,7 @@ final class CategoryViewController: UIViewController {
         flow.minimumInteritemSpacing = 1
         flow.minimumLineSpacing = 1
         collectionView.collectionViewLayout = flow
-        title = ConstantString.Category.navigationTitle.rawValue.localized
+        navigationItem.title = ConstantString.Category.navigationTitle.rawValue.localized
     }
     
     override func viewDidLoad() {

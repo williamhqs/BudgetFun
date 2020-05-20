@@ -207,11 +207,11 @@
             </objects>
             <point key="canvasLocation" x="-342" y="-77"/>
         </scene>
-        <!--Overview-->
+        <!--Navigation Controller-->
         <scene sceneID="X8R-zD-ax6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IKZ-jc-dgM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Overview" id="8AB-8c-oWJ"/>
+                    <tabBarItem key="tabBarItem" title="" image="overview" id="8AB-8c-oWJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xb7-Ex-Sbj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -226,11 +226,11 @@
             </objects>
             <point key="canvasLocation" x="576.81159420289862" y="-401.11607142857139"/>
         </scene>
-        <!--Category-->
+        <!--Navigation Controller-->
         <scene sceneID="z5f-pc-W3d">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G1Q-aR-7xg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Category" id="pb9-OA-Hik"/>
+                    <tabBarItem key="tabBarItem" title="" image="category" id="pb9-OA-Hik"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mWb-gq-jdO">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -246,4 +246,8 @@
             <point key="canvasLocation" x="576.81159420289862" y="246.42857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="category" width="50" height="50"/>
+        <image name="overview" width="50" height="50"/>
+    </resources>
 </document>

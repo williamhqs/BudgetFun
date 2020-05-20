@@ -13,15 +13,11 @@ class OverviewViewController: UIViewController {
 
     let viewModel = OverviewViewModel()
     
-   
-
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-//        draw("123567555", view.bounds, UIFont.systemFont(ofSize: 15.0))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +30,7 @@ class OverviewViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewTrsaction))
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 50
-        title = ConstantString.OverView.navigationTitle.rawValue.localized
+        navigationItem.title = ConstantString.OverView.navigationTitle.rawValue.localized
     }
     
     @objc func addNewTrsaction() {
