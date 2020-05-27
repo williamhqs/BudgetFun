@@ -23,7 +23,7 @@ final class CategoryViewModel {
             return
         }
         var categoryArray = [Category]()
-        for index in 0...3 {
+        for index in 0...1 {
             let newCategory = Category(context: fetchedResultsController.managedObjectContext)
             newCategory.name = ("Category" + String(index)).localized
             newCategory.color = [UIColor.blue, .red, .green, .cyan][index]

@@ -43,7 +43,7 @@ final class CategoryViewController: UIViewController {
         viewModel.preloadCategories()
     }
 
-    
+     
 }
 
 extension CategoryViewController: UICollectionViewDataSource {

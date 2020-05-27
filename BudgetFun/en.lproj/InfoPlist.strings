@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  BudgetFun
+
+  Created by William Hu on 27/5/20.
+  Copyright © 2020 William Hu. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Super Bill";
