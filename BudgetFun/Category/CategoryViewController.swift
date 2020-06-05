@@ -33,7 +33,7 @@ final class CategoryViewController: UIViewController {
         flow.minimumInteritemSpacing = 1
         flow.minimumLineSpacing = 1
         collectionView.collectionViewLayout = flow
-        navigationItem.title = ConstantString.Category.navigationTitle.rawValue.localized
+        navigationItem.title = ConstantString.CategoryTitle.navigationTitle.rawValue.localized
     }
     
     override func viewDidLoad() {
@@ -68,9 +68,9 @@ extension CategoryViewController: UICollectionViewDataSource {
 
 extension CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let category = viewModel.fetchedResultsController.object(at: indexPath)
-//        didSelectCategory?(category)
-//        navigationController?.popViewController(animated: true)
+        let category = viewModel.fetchedResultsController.object(at: indexPath)
+        didSelectCategory?(category)
+        navigationController?.popViewController(animated: true)
     }
     
 }

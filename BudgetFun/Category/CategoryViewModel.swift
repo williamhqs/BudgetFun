@@ -23,13 +23,15 @@ final class CategoryViewModel {
             return
         }
         var categoryArray = [Category]()
-        for index in 0...1 {
+        ConstantString.Category().categories.forEach {
             let newCategory = Category(context: fetchedResultsController.managedObjectContext)
-            newCategory.name = ("Category" + String(index)).localized
-            newCategory.color = [UIColor.blue, .red, .green, .cyan][index]
+            newCategory.name = $0.localized
+            newCategory.color = UIColor.cyan
             newCategory.type = CategoryType.default.rawValue
             categoryArray.append(newCategory)
         }
+            
+
         do {
             try fetchedResultsController.managedObjectContext.save()
         } catch {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ii9-fU-F7X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ii9-fU-F7X">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -59,7 +59,6 @@
                                         <connections>
                                             <outlet property="categoryColorView" destination="SpQ-pH-C7i" id="993-8b-pTD"/>
                                             <outlet property="categoryName" destination="JoF-9A-iO0" id="6hr-cN-PGt"/>
-                                            <segue destination="OBl-33-ON7" kind="show" destinationCreationSelector="showDetails:" id="saY-Vw-uqM"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -187,7 +186,7 @@
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lz-4n-9ih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2426" y="-201"/>
+            <point key="canvasLocation" x="2394" y="-277"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pDh-4P-E1B">

@@ -6,8 +6,7 @@
 //  Copyright © 2020 William Hu. All rights reserved.
 //
 
-import UIKit
-
+import SwiftUI
 
 class OverviewViewController: UIViewController {
 
@@ -34,7 +33,11 @@ class OverviewViewController: UIViewController {
     }
     
     @objc func addNewTrsaction() {
-        let addTransactionViewController = AddTransactionViewController(nibName: AddTransactionViewController.identifier, bundle: nil)
+        
+        let view = AddTransactionView {
+            self.dismiss(animated: true, completion: nil)
+        }
+        let addTransactionViewController = UIHostingController(rootView: view)
         let navigationController = UINavigationController(rootViewController: addTransactionViewController)
         navigationController.modalPresentationStyle = .fullScreen
         present(navigationController, animated: true, completion: nil)

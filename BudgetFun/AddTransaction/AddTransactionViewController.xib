@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -24,37 +23,37 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXW-f6-HdH">
-                    <rect key="frame" x="32" y="175" width="11" height="21"/>
+                    <rect key="frame" x="32" y="131" width="11" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input currency number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9A-u0-Qvt">
-                    <rect key="frame" x="32" y="138" width="350" height="21"/>
+                    <rect key="frame" x="32" y="94" width="350" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAp-Fv-MVR">
-                    <rect key="frame" x="32" y="236" width="71" height="21"/>
+                    <rect key="frame" x="32" y="192" width="71" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ssO-w6-2iF" customClass="CurrencyField" customModule="BudgetFun" customModuleProvider="target">
-                    <rect key="frame" x="51" y="170" width="331" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ssO-w6-2iF" customClass="CurrencyTextField" customModule="BudgetFun" customModuleProvider="target">
+                    <rect key="frame" x="51" y="126" width="331" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSV-gs-Um8">
-                    <rect key="frame" x="32" y="320" width="350" height="30"/>
+                    <rect key="frame" x="32" y="276" width="350" height="30"/>
                     <state key="normal" title="Select Category"/>
                     <connections>
                         <action selector="selectCategoryPressed:" destination="-1" eventType="touchUpInside" id="EWU-h1-rLy"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxV-B1-MmD">
-                    <rect key="frame" x="16" y="76" width="54" height="30"/>
+                    <rect key="frame" x="16" y="32" width="54" height="30"/>
                     <state key="normal" title="Dismiss"/>
                     <connections>
                         <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="DTd-YL-DDO"/>
@@ -62,7 +61,7 @@
                     </connections>
                 </button>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f2r-OG-VhM">
-                    <rect key="frame" x="32" y="273" width="131" height="32"/>
+                    <rect key="frame" x="32" y="229" width="131" height="32"/>
                     <segments>
                         <segment title="First"/>
                         <segment title="Second"/>
@@ -72,7 +71,7 @@
                     </connections>
                 </segmentedControl>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3k-mv-0Sg">
-                    <rect key="frame" x="182" y="382" width="50" height="50"/>
+                    <rect key="frame" x="182" y="338" width="50" height="50"/>
                     <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="qlx-Om-Agc"/>
@@ -80,13 +79,13 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkH-d2-Mff">
-                    <rect key="frame" x="207" y="440" width="0.0" height="0.0"/>
+                    <rect key="frame" x="207" y="396" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD8-3t-G17">
-                    <rect key="frame" x="327" y="76" width="55" height="30"/>
+                    <rect key="frame" x="327" y="32" width="55" height="30"/>
                     <state key="normal" title="Confirm"/>
                     <connections>
                         <action selector="confirmButtonPressed:" destination="-1" eventType="touchUpInside" id="TZo-Xy-acF"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CurrencyField: UITextField {
+class CurrencyTextField: UITextField {
     
     private var lastValue: String?
     
@@ -49,6 +49,6 @@ class CurrencyField: UITextField {
     
 }
 
-extension CurrencyField {
+extension CurrencyTextField {
     var doubleValue: Double { (decimal as NSDecimalNumber).doubleValue }
 }

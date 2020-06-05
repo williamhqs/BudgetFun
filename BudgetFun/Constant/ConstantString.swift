@@ -13,10 +13,19 @@ struct ConstantString {
         case navigationTitle = "Overview"
     }
 
-    enum Category: String {
+    enum CategoryTitle: String {
         case navigationTitle = "Category"
     }
+    
+    struct Category {
+        let categories = ["Food".localized, "Play".localized]
+    }
+    
 }
+
+
+
+
 
 
 

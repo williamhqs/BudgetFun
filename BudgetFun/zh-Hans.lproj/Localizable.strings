@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  BudgetFun
+
+  Created by William Hu on 28/5/20.
+  Copyright © 2020 William Hu. All rights reserved.
+*/
+"Overview" = "语言";
+"Category" = "类别";
+"Play" = "玩";
+"Food" = "吃";
+"Dismiss" = "取消";
+"Confirm" = "确认";
+
